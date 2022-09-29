@@ -2,17 +2,10 @@ name = "Magic Box"
 description = "A simple blog theme with project landing-pages"
 license = "MIT"
 homepage = "https://github.com/dulvui/magic-box"
-# The minimum version of Zola required
 min_version = "0.4.0"
-# An optional live demo URL
 demo = "https://dulvui.github.io/magic-box"
 
-# Any variable there can be overridden in the end user `config.toml`
-# You don't need to prefix variables by the theme name but as this will
-# be merged with user data, some kind of prefix or nesting is preferable
-# Use snake_casing to be consistent with the rest of Zola
 [extra]
-
 
 [author]
 name = "Simon Dalvai"
