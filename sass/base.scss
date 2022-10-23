@@ -1,0 +1,125 @@
+body {
+    font-family: 'Rubik', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    -webkit-font-smoothing: antialiased;
+    padding: 1vh 10vw 5vh 10vw;
+    background-color: #FDF6E3;
+}
+
+.nav-right {
+    float: right;
+    margin-left: 2vw;
+}
+
+#nav-selfie {
+    width: 2vw;
+    height: 2vw;
+}
+
+.link {
+    text-decoration: none;
+    color: #121314;
+    position: relative;
+}
+
+.link:after {
+    content: '';
+    position: absolute;
+    z-index: -1;
+    top: 60%;
+    left: -0.1em;
+    right: -0.1em;
+    bottom: 0;
+    transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
+    background-color: rgba(187, 0, 0, 0.5);
+}
+
+.link:hover:after {
+    top: 0%;
+}
+
+.appstore {
+    background: url(img/AppStore.svg) no-repeat;
+    cursor: pointer;
+    border: none;
+    background-size: 34.5vw;
+    width: 34.5vw;
+    height: 15vw;
+    margin-right: 1vw;
+}
+
+.playstore {
+    background: url(img/PlayStore.svg) no-repeat;
+    cursor: pointer;
+    border: none;
+    background-size: 38vw;
+    width: 38vw;
+    height: 15vw;
+}
+
+.footer {
+    font-weight: 300;
+    font-size: 3vw;
+    padding-bottom: 1vw;
+    padding-top: 1vw;
+    margin-top: 1vw;
+    background: #FDF6E3;
+    border-top: #121314 1px solid;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    position: fixed;
+    text-align: center;
+}
+
+/* desktop */
+
+@media only screen and (min-width: 768px) {
+
+
+    .appstore {
+        background: url(img/AppStore.svg) no-repeat;
+        cursor: pointer;
+        border: none;
+        background-size: 9vw;
+        width: 9vw;
+        height: 5vw;
+        margin-right: 1vw;
+    }
+
+    .playstore {
+        background: url(img/PlayStore.svg) no-repeat;
+        cursor: pointer;
+        border: none;
+        background-size: 10vw;
+        width: 10vw;
+        height: 5vw;
+    }
+
+    .game {
+        display: inline-table;
+        width: 24vw;
+        margin-top: 2vw;
+    }
+
+    .icon-games {
+        float: left;
+        padding-right: 1.5vw;
+        padding-left: 0.5vw;
+        width: 7vw;
+        height: 7vw;
+    }
+
+    .footer {
+        font-weight: 300;
+        font-size: 1vw;
+        padding-bottom: 0.5vw;
+        padding-top: 0.5vw;
+        background: #FDF6E3;
+        border-top: #121314 1px solid;
+        width: 100%;
+        left: 0;
+        bottom: 0;
+        position: fixed;
+        text-align: center;
+    }
+}
