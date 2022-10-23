@@ -3,15 +3,39 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MyBlog</title>
+  <title>
+    {% block title %}
+      {% if page.title %}
+        {{ page.title }} - {{ config.title }}
+      {% elif section.title and section.title != config.title %}
+       {{ section.title }} - {{ config.title }}
+      {% else %}
+        {{ config.title }}
+      {%- endif %}
+    {% endblock title %}
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <link rel="stylesheet" href="{{ get_url(path='base.css', trailing_slash=false) | safe }}" />
+  <link rel="stylesheet" href="index.css" />
 </head>
 
 <body>
+  <nav>
+    <a href="/">simondalvai.com</a>
+    <a class="nav-right" href="/about">About</a>
+    <a class="nav-right" href="/blog">Blog</a>
+    <a class="nav-right" href="/games">Games</a>
+  </nav>
   <section class="section">
     <div class="container">
       {% block content %} {% endblock %}
     </div>
   </section>
+
+  <footer class="footer">
+    <a class="link" href="privacy-policies/privacy-policy.html">Privacy Policy</a> | &copy 2022 Simon Dalvai |
+    <a class="link" a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
+  </footer>
 </body>
 
 </html>

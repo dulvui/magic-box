@@ -2,8 +2,20 @@
 
 {% block content %}
 <h1 class="title">
-  {{ page.title }}
+  {{ section.title }}
 </h1>
-<p class="subtitle"><strong>{{ page.date }}</strong></p>
-{{ page.content | safe }}
+{% set games = get_section(path="games/_index.md") %}
+{% for page in games.pages %}
+<!-- filter out pages that are not projects, like 'About' -->
+{% if page.title != 'About' %}
+<div class="game">
+  <a href="{{ page.permalink | safe }}">
+    <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
+  </a>
+  <a class="link fontgames" href="{{ page.permalink | safe }}">
+    {{ page.title }}</a>
+  {{ page.description | safe }}
+</div>
+{% endif %}
+{% endfor %}
 {% endblock content %}

@@ -1,5 +1,6 @@
 # The URL the site will be built for
 base_url = "https://example.com"
+title = "Simon Dalvai"
 
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
@@ -12,5 +13,7 @@ build_search_index = false
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
 highlight_code = false
 
+external_links_target_blank = true
+
 [extra]
-# Put all your custom variables here
+icon = "img/me.webp"

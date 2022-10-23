@@ -1,7 +1,36 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
-  This is my website made with Zola.
-</h1>
+
+<div class="top-row">
+  <h1>{{ section.extra.subtitle | safe }}</h1> <img class="selfie" src="{{ config.extra.icon | safe }}" alt="An image of myself">
+</div>
+<h2>{{ section.extra.introduction | safe }}</h2>
+
+{{ section.content | safe }}
+
+<a href="/games"><h2>Games</h2></a>
+
+{% set games = get_section(path="games/_index.md") %}
+{% for page in games.pages | slice(end=3) %}
+<!-- filter out pages that are not projects, like 'About' -->
+{% if page.title != 'About' %}
+<div class="game">
+  <a href="{{ page.permalink | safe }}">
+    <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
+  </a>
+  <a class="link fontgames" href="{{ page.permalink | safe }}">
+    {{ page.title }}</a>
+  {{ page.description | safe }}
+</div>
+{% endif %}
+{% endfor %}
+
+<a href="/blog"><h2>Blog</h2></a>
+
+{% set blog = get_section(path="blog/_index.md") %}
+{% for page in blog.pages | slice(end=3) %}
+<li><a href="{{ page.permalink | safe }}">{{ page.title }}</a></li>
+{% endfor %}
+
 {% endblock content %}

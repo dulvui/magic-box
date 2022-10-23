@@ -1,0 +1,31 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1 class="title">
+  {{ page.title }}
+</h1>
+
+{{ page.content | safe }}
+
+<div class="buttons ">
+  {% if page.extra.appstore_link != '' %}
+
+  <button class="appstore"
+    onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
+  </button>
+
+  {% endif %}
+  {% if page.extra.playstore_link != '' %}
+
+  <button class="playstore"
+    onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
+  </button>
+  {% endif %}
+
+</div>
+
+<br>
+
+<a href="privacy-policy">privacy policy</a>
+
+{% endblock content %}
