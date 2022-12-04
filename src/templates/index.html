@@ -1,0 +1,57 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="top-row">
+  <h1>{{ section.extra.subtitle | safe }}</h1> <img class="selfie" src="{{ config.extra.icon | safe }}"
+    alt="An image of myself">
+</div>
+<h2>{{ section.extra.introduction | safe }}</h2>
+
+{{ section.content | safe }}
+
+
+<!-- <h2><a class="link" href="/games">My games</a></h2> -->
+
+{% set games = get_section(path="games/_index.md") %}
+{% for page in games.pages | slice(end=3) %}
+<!-- filter out pages that are not projects, like 'About' -->
+{% if page.title != 'About' %}
+<div class="game">
+  <a href="{{ page.permalink | safe }}">
+    <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
+  </a>
+  <a class="link title-game" href="{{ page.permalink | safe }}">
+    {{ page.title }}</a>
+  <p>{{ page.description | safe }}</p>
+</div>
+{% endif %}
+{% endfor %}
+
+<!-- <h2><a class="link" href="/blog">My blog</a></h2> -->
+
+{% set blog = get_section(path="blog/_index.md") %}
+{% for page in blog.pages | slice(end=3) %}
+<p><a class="link" href="{{ page.permalink | safe }}">{{ page.title }}</a></p>
+{% endfor %}
+
+
+<div class="icons">
+  <a href="{{ config.extra.links.github | safe }}" target="_blank"><img class="icon"
+      src="{{ config.extra.github | safe }}"></a>
+  <a href="{{ config.extra.links.githubsponsors | safe }}" target="_blank"><img class="icon"
+      src="{{ config.extra.githubsponsors | safe }}"></a>
+  <a href="{{ config.extra.links.kofi | safe }}" target="_blank"><img class="icon"
+      src="{{ config.extra.kofi | safe }}"></a>
+  <a href="{{ config.extra.links.liberapay | safe }}" target="_blank"><img class="icon"
+      src="{{ config.extra.liberapay | safe }}"></a>
+  <a href="{{ config.extra.links.reddit | safe }}" target="_blank"><img class="icon"
+      src="{{ config.extra.reddit | safe }}"></a>
+  <a href="{{ config.extra.links.linkedin | safe }}" target="_blank"><img class="icon"
+      src="{{ config.extra.linkedin | safe }}"></a>
+  <a href="{{ config.extra.links.mastodon | safe }}" target="_blank"><img class="icon"
+      src="{{ config.extra.mastodon | safe }}"></a>
+</div>
+
+
+{% endblock content %}

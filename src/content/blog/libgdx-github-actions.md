@@ -1,5 +1,5 @@
 +++
-title = "My first post"
+title = "Github actions for libGDX"
 date = 2022-09-29
 +++
 

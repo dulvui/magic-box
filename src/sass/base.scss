@@ -115,6 +115,11 @@ p {
     }
 
     .icons {
+        display: flex;
+        justify-content: center;
+    }
+
+    .icon {
         width: 3vw;
         height: 3vw;
         margin-right: 0.5vw;
