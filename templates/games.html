@@ -4,6 +4,7 @@
 <h1 class="title">
   {{ section.title }}
 </h1>
+{{ section.content | safe }}
 {% set games = get_section(path="games/_index.md") %}
 {% for page in games.pages %}
 <!-- filter out pages that are not projects, like 'About' -->
