@@ -1,9 +1,25 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1 class="title">
+<h2>{{ page.title | safe }} </h2>
 
-  So much privacy for {{ page.title }}
-</h1>
-{{ page.content | safe }}
+  <p>{{ page.extra.name | safe }} <strong>doesn't collect or share</strong> any of your personal any other type of data.</p>
+  <p><strong>No data is leaving your device and so it can't even reach the internet.</strong></p>
+
+  <br>
+
+  <p>{{ page.extra.name | safe }} doesn't track you and has no third party libraries included. It is made with <a class="link" a
+          href="https://godotengine.org" target="_blank">Godot Engine</a> and it is licensed under the Free and Libre Open Source
+      <a class="link" a href="{{ page.extra.licenselink | safe }}"
+          target="_blank">{{ page.extra.license | safe }}</a> license.
+      <br>
+      You can find the source code on <a class="link" a href="{{ page.extra.sourcecode | safe }}"
+          target="_blank">GitHub</a>.
+  </p>
+  <p>This policy is effective as of {{ page.date | safe }}. Any changes to this privacy policy can be found on <a class="link" a
+          href="{{ config.extra.repository | safe }}"
+          target="_blank">GitHubs</a> commit history of this website.</p>
+  <p>If you have questions or you are just curious, drop me a mail at <a class="link"
+          href="mailto:{{ config.extra.email | safe }}">{{ config.extra.email | safe }}</a>.</p>
+
 {% endblock content %}
