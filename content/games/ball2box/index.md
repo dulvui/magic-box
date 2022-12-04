@@ -1,11 +1,12 @@
 +++
-title = "Ball2Box"
+title = 'Ball2Box'
 description = "World's first Broomball video game."
 date = 2022-09-29
 [extra]
-icon = "img/ball2box.svg"
+icon = 'img/ball2box.svg'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.broomball'
 appstore_link = 'https://apps.apple.com/app/pocket-broomball/id1511009171'
+type = 'Godot'
 +++
 
 Can you get all three stars in all levels?  

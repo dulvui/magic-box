@@ -1,11 +1,12 @@
 +++
-title = "Pocket Broomball"
+title = 'Pocket Broomball'
 description = "World's first Broomball video game."
 date = 2021-09-29
 [extra]
-icon = "img/pocket-broomball.svg"
+icon = 'img/pocket-broomball.svg'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.broomball'
 appstore_link = 'https://apps.apple.com/app/pocket-broomball/id1511009171'
+type = 'Godot'
 +++
 
 The coolest winter sport has finally come to your phone!  
