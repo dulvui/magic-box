@@ -1,5 +1,5 @@
 +++
-title = "About"
+title = "Support me"
 sort_by = "date"
 template = "generic.html"
 +++

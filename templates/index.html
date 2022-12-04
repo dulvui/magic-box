@@ -3,13 +3,25 @@
 {% block content %}
 
 <div class="top-row">
-  <h1>{{ section.extra.subtitle | safe }}</h1> <img class="selfie" src="{{ config.extra.icon | safe }}" alt="An image of myself">
+  <h1>{{ section.extra.subtitle | safe }}</h1> <img class="selfie" src="{{ config.extra.icon | safe }}"
+    alt="An image of myself">
 </div>
 <h2>{{ section.extra.introduction | safe }}</h2>
 
 {{ section.content | safe }}
 
-<a href="/games"><h2>Games</h2></a>
+<div>
+  <a href="{{ config.extra.links.github | safe }}" target="_blank"><img class="icons" src="{{ config.extra.github | safe }}"></a>
+  <a href="{{ config.extra.links.githubsponsors | safe }}" target="_blank"><img class="icons" src="{{ config.extra.githubsponsors | safe }}"></a>
+  <a href="{{ config.extra.links.kofi | safe }}" target="_blank"><img class="icons" src="{{ config.extra.kofi | safe }}"></a>
+  <a href="{{ config.extra.links.liberapay | safe }}" target="_blank"><img class="icons" src="{{ config.extra.liberapay | safe }}"></a>
+  <a href="{{ config.extra.links.reddit | safe }}" target="_blank"><img class="icons" src="{{ config.extra.reddit | safe }}"></a>
+  <a href="{{ config.extra.links.linkedin | safe }}" target="_blank"><img class="icons" src="{{ config.extra.linkedin | safe }}"></a>
+  <a href="{{ config.extra.links.mastodon | safe }}" target="_blank"><img class="icons" src="{{ config.extra.mastodon | safe }}"></a>
+
+</div>
+
+<h2><a class="link" href="/games">My games</a></h2>
 
 {% set games = get_section(path="games/_index.md") %}
 {% for page in games.pages | slice(end=3) %}
@@ -26,7 +38,7 @@
 {% endif %}
 {% endfor %}
 
-<a href="/blog"><h2>Blog</h2></a>
+<h2><a class="link" href="/blog">My blog</a></h2>
 
 {% set blog = get_section(path="blog/_index.md") %}
 {% for page in blog.pages | slice(end=3) %}
