@@ -11,3 +11,18 @@
     width: 7vw;
     height: 7vw;
 }
+
+@media only screen and (min-width: 768px) {
+
+    .top-row {
+        display: flex;
+    }
+
+    .selfie {
+        width: 8vw;
+        height: 8vw;
+        margin-left: 5vw;
+        margin-top: 3vw;
+    }
+
+}
