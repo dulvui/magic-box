@@ -5,10 +5,30 @@
   {{ section.title }}
 </h1>
 {{ section.content | safe }}
+<h2>Godot Engine</h2>
+
 {% set games = get_section(path="games/_index.md") %}
 {% for page in games.pages %}
 <!-- filter out pages that are not projects, like 'About' -->
-{% if page.title != 'About' %}
+{% if page.extra.type == 'Godot' %}
+<div class="game">
+  <a href="{{ page.permalink | safe }}">
+    <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
+  </a>
+  <a class="link fontgames" href="{{ page.permalink | safe }}">
+    {{ page.title }}</a>
+  {{ page.description | safe }}
+</div>
+{% endif %}
+{% endfor %}
+
+
+<h2>libGDX</h2>
+
+{% set games = get_section(path="games/_index.md") %}
+{% for page in games.pages %}
+<!-- filter out pages that are not projects, like 'About' -->
+{% if page.extra.type == 'libGDX' %}
 <div class="game">
   <a href="{{ page.permalink | safe }}">
     <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
