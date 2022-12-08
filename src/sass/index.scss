@@ -43,6 +43,29 @@
 
 @media only screen and (min-width: 768px) {
 
+    .appstore {
+        background: url(img/AppStore.svg) no-repeat;
+        cursor: pointer;
+        border: none;
+        background-size: 5vw;
+        width: 5vw;
+        height: 2vw;
+        margin-right:0.5vw;
+    }
+
+    .playstore {
+        background: url(img/PlayStore.svg) no-repeat;
+        cursor: pointer;
+        border: none;
+        background-size: 5.5vw;
+        width: 5.5vw;
+        height: 2vw;
+    }
+
+    #game-description{
+        font-size: 0.8vw;
+    }
+
 
     .top-row {
         display: flex;

@@ -3,7 +3,7 @@ title="Games"
 render=true
 sort_by = "date"
 template = "games.html"
-page_template = "project.html"
+page_template = "game.html"
 +++
 
 I create mobile games with [Godot Engine](https://godotengine.org) and [libGDX](https://libgdx.com) in my spare time.  
