@@ -10,6 +10,7 @@ body {
 
 #content {
     flex: 1;
+    margin-bottom: 10vh;
 }
 
 h1 {
@@ -91,6 +92,19 @@ p {
     text-align: center;
 }
 
+
+.icons {
+    display: flex;
+    justify-content: center;
+}
+
+.icon {
+    width: 8vw;
+    height: 8vw;
+    margin-right: 2.2vw;
+}
+
+
 /* desktop */
 
 @media only screen and (min-width: 768px) {
@@ -151,6 +165,12 @@ p {
         padding-left: 0.5vw;
         width: 7vw;
         height: 7vw;
+    }
+
+    .icon {
+        width: 3vw;
+        height: 3vw;
+        margin-right: 0.5vw;
     }
 
     .footer {
