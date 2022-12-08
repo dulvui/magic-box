@@ -44,6 +44,8 @@
 {% endif %}
 {% endfor %}
 
+<p><a class="link" href="games">More games...</a></p>
+
 <!-- <h2><a class="link" href="/blog">My blog</a></h2> -->
 
 <p>{{ section.extra.blog | safe }}</p>
@@ -51,7 +53,7 @@
 
 {% set blog = get_section(path="blog/_index.md") %}
 {% for page in blog.pages | slice(end=3) %}
-<p><a class="link" href="{{ page.permalink | safe }}">{{ page.title }}</a></p>
+<p><a class="link" href="{{ page.permalink | safe }}">{{ page.date }} - {{ page.title }}</a></p>
 {% endfor %}
 
 
