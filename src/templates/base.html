@@ -37,11 +37,9 @@
     <a class="link nav nav-right" href="/blog">Blog</a>
     <a class="link nav nav-right" href="/games">Games</a>
   </nav>
-  <section class="section">
-    <div class="container">
-      {% block content %} {% endblock %}
-    </div>
-  </section>
+  <div id="content">
+    {% block content %} {% endblock %}
+  </div>
 
   <footer class="footer">
     <a class="link" href="privacy-policy">Privacy Policy</a> | &copy 2022 Simon Dalvai |
