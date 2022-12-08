@@ -27,18 +27,6 @@
     margin-top: 10vw;
 }
 
-.icons {
-    display: flex;
-    justify-content: center;
-}
-
-.icon {
-    width: 8vw;
-    height: 8vw;
-    margin-right: 2.2vw;
-}
-
-
 /* desktop */
 
 @media only screen and (min-width: 768px) {
@@ -76,12 +64,6 @@
         height: 8vw;
         margin-left: 5vw;
         margin-top: 2vw;
-    }
-
-    .icon {
-        width: 3vw;
-        height: 3vw;
-        margin-right: 0.5vw;
     }
 
     .game {
