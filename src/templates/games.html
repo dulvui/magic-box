@@ -15,9 +15,25 @@
   <a href="{{ page.permalink | safe }}">
     <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
   </a>
-  <a class="link fontgames" href="{{ page.permalink | safe }}">
+  <a class="link title-games" href="{{ page.permalink | safe }}">
     {{ page.title }}</a>
-    <p>{{ page.description | safe }}</p>
+  <p id="game-description">{{ page.description | safe }}</p>
+  <div>
+    {% if page.extra.appstore_link != '' %}
+  
+    <button class="appstore"
+      onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
+    </button>
+  
+    {% endif %}
+    {% if page.extra.playstore_link != '' %}
+  
+    <button class="playstore"
+      onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
+    </button>
+    {% endif %}
+  
+  </div>
 </div>
 {% endif %}
 {% endfor %}
@@ -33,9 +49,25 @@
   <a href="{{ page.permalink | safe }}">
     <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
   </a>
-  <a class="link fontgames" href="{{ page.permalink | safe }}">
+  <a class="link title-games" href="{{ page.permalink | safe }}">
     {{ page.title }}</a>
-  <p>{{ page.description | safe }}</p>
+  <p id="game-description">{{ page.description | safe }}</p>
+  <div>
+    {% if page.extra.appstore_link != '' %}
+  
+    <button class="appstore"
+      onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
+    </button>
+  
+    {% endif %}
+    {% if page.extra.playstore_link != '' %}
+  
+    <button class="playstore"
+      onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
+    </button>
+    {% endif %}
+  
+  </div>
 </div>
 {% endif %}
 {% endfor %}

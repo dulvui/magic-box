@@ -5,13 +5,13 @@
   <meta charset="utf-8">
   <title>
     {% block title %}
-      {% if page.title %}
-        {{ page.title }} - {{ config.title }}
-      {% elif section.title and section.title != config.title %}
-       {{ section.title }} - {{ config.title }}
-      {% else %}
-        {{ config.title }}
-      {%- endif %}
+    {% if page.title %}
+    {{ page.title }} - {{ config.title }}
+    {% elif section.title and section.title != config.title %}
+    {{ section.title }} - {{ config.title }}
+    {% else %}
+    {{ config.title }}
+    {%- endif %}
     {% endblock title %}
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -21,7 +21,17 @@
 
 <body>
   <nav>
+    <!-- Loops over current path, max depth 2 -->
     <a class="link nav" href="/">simondalvai.com</a>
+    {% for path in current_path | split(pat="/") %}
+    {% if path | wordcount > 0%}
+    {% if loop.index == 2 %}
+    /<a class="link nav" href="/{{ path }}">{{ path }}</a>
+    {% else %}
+    /<a class="link nav" href="{{ current_path }}">/{{ path }}</a>
+    {% endif %}
+    {% endif %}
+    {% endfor %}
     <!-- <a class="link nav nav-right" href="/about">About</a> -->
     <!-- <a class="link nav nav-right" href="/support">Support me</a> -->
     <a class="link nav nav-right" href="/blog">Blog</a>
