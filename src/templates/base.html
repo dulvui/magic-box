@@ -28,7 +28,7 @@
     {% if loop.index == 2 %}
     /<a class="link nav" href="/{{ path }}">{{ path }}</a>
     {% else %}
-    /<a class="link nav" href="{{ current_path }}">/{{ path }}</a>
+    /<a class="link nav" href="{{ current_path }}">{{ path }}</a>
     {% endif %}
     {% endif %}
     {% endfor %}
