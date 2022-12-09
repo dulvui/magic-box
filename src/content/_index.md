@@ -18,4 +18,4 @@ blog = "I also write some things in my blog:"
 privacypolicy = "privacy-policies.md"
 +++
 
-I create mobile games for **free** with **zero ads** and **zero tracking**.
+I create  **open source** games for **free** with **zero ads** and **zero tracking**.
