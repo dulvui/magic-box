@@ -25,17 +25,18 @@
     <a class="link nav" href="/">simondalvai.com</a>
     {% for path in current_path | split(pat="/") %}
     {% if path | wordcount > 0%}
-    {% if loop.index == 2 %}
-    <span class="dynamic-url">/<a class="link nav dynamic-url" href="/{{ path }}">{{ path }}</a></span>
-    {% else %}
-    <span class="dynamic-url">/<a class="link nav" href="{{ current_path }}">{{ path }}</a></span>
-    {% endif %}
-    {% endif %}
-    {% endfor %}
-    <!-- <a class="link nav nav-right" href="/about">About</a> -->
-    <!-- <a class="link nav nav-right" href="/support">Support me</a> -->
-    <a class="link nav nav-right" href="/blog">Blog</a>
-    <a class="link nav nav-right" href="/games">Games</a>
+    {% set path_length = current_path | split(pat="/") | length - 1 %}
+    {% if loop.index < path_length %} <span class="dynamic-url">/<a class="link nav dynamic-url"
+        href="{{ current_path | split(pat='/') | slice(end=path_length - 1) | join(sep='/') }}">{{ path }}</a></span>
+      {% else %}
+      <span class="dynamic-url">/<a class="link nav" href="{{ current_path }}">{{ path }}</a></span>
+      {% endif %}
+      {% endif %}
+      {% endfor %}
+      <!-- <a class="link nav nav-right" href="/about">About</a> -->
+      <!-- <a class="link nav nav-right" href="/support">Support me</a> -->
+      <a class="link nav nav-right" href="/blog">Blog</a>
+      <a class="link nav nav-right" href="/games">Games</a>
   </nav>
   <div id="content">
     {% block content %} {% endblock %}
@@ -61,7 +62,12 @@
 
 
   <footer class="footer">
-    <a class="link" href="privacy-policy">Privacy Policy</a> | &copy 2022 Simon Dalvai |
+    {% if 'blog' not in current_path %}
+    <a class="link" href="privacy-policy">Privacy Policy</a>
+    {% else %}
+    <a class="link" href="/privacy-policy">Privacy Policy</a>
+    {% endif %}
+    | &copy 2022 Simon Dalvai |
     <a class="link" a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
   </footer>
 </body>
