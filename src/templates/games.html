@@ -13,7 +13,7 @@
 {% if page.extra.type == 'Godot' %}
 <div class="game">
   <a href="{{ page.permalink | safe }}">
-    <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
+    <img class="icon-games" src="/{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
   </a>
   <a class="link title-games" href="{{ page.permalink | safe }}">
     {{ page.title }}</a>
@@ -47,7 +47,7 @@
 {% if page.extra.type == 'libGDX' %}
 <div class="game">
   <a href="{{ page.permalink | safe }}">
-    <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
+    <img class="icon-games" src="/{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
   </a>
   <a class="link title-games" href="{{ page.permalink | safe }}">
     {{ page.title }}</a>
