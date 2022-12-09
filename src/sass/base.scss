@@ -11,22 +11,22 @@ body {
     min-height: 97vh;
 
     // scroll indicator
-    background-image: linear-gradient(to right top, $link-color 50%, $background-color 50%);
-    background-size: 100% calc(100% - 100vh + 0.3vh);
-    background-repeat: no-repeat;
+    // background-image: linear-gradient(to right top, $link-color 50%, $background-color 50%);
+    // background-size: 100% calc(100% - 100vh + 0.5vh);
+    // background-repeat: no-repeat;
 }
 
 // scroll indicator
-body::after {
-    content: "";
-    position: fixed;
-    top: 0.3vh;
-    left: 0;
-    bottom: 0;
-    right: 0;
-    background: $background-color;
-    z-index: -2;
-}
+// body::after {
+//     content: "";
+//     position: fixed;
+//     top: 0.5vh;
+//     left: 0;
+//     bottom: 0;
+//     right: 0;
+//     background: $background-color;
+//     z-index: -2;
+// }
 
 #content {
     flex: 1;
