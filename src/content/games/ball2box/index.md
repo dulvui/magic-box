@@ -2,6 +2,7 @@
 title = 'Ball2Box'
 description = "World's first Broomball video game."
 date = 2022-09-29
+aliases = ["ball2box","ball2box.html"]
 [extra]
 icon = 'img/ball2box.svg'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.broomball'

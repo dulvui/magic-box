@@ -2,6 +2,7 @@
 title = 'Sn4ke'
 description = "World's first Broomball video game."
 date = 2020-09-29
+aliases = ["sn4ke","sn4ke.html"]
 [extra]
 icon = 'img/sn4ke.svg'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.broomball'
