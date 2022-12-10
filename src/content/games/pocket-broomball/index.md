@@ -2,6 +2,7 @@
 title = 'Pocket Broomball'
 description = "World's first Broomball video game."
 date = 2021-09-29
+aliases = ["pocketbroomball","pocketbroomball.html"]
 [extra]
 icon = 'img/pocket-broomball.svg'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.broomball'

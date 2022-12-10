@@ -10,17 +10,23 @@
 <div>
   {% if page.extra.appstore_link != '' %}
 
-  <button class="appstore"
-    onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
+  <button class="appstore" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
   </button>
 
   {% endif %}
   {% if page.extra.playstore_link != '' %}
 
-  <button class="playstore"
-    onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
+  <button class="playstore" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
   </button>
   {% endif %}
 
+</div>
+
+<div id="screenshots">
+  {% for asset in page.assets -%}
+  {%- if asset is matching("[.](jpg|png)$") -%}
+  <img class="screenshot" src="{{ get_url(path=asset) }}" />
+  {%- endif %}
+  {%- endfor %}
 </div>
 {% endblock content %}
