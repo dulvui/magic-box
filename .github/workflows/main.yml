@@ -1,0 +1,51 @@
+name: Deploy
+
+on:
+  push:
+
+env:
+  BUILD_DIRECTORY: docs
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      - name: Get zola
+        run: |
+          wget -q -O - \
+          "https://github.com/getzola/zola/releases/download/v0.16.1/zola-v0.16.1-x86_64-unknown-linux-gnu.tar.gz" \
+          | tar xzf - -C /usr/local/bin
+
+      - name: Run check
+        run: zola check
+        working-directory: {{ env.WORKING_DIRECTORY }}
+  
+  deploy:
+    runs-on: ubuntu-latest
+    if: github.ref == 'refs/heads/prod'
+     needs: test
+    steps:
+      - name: Checkout source code
+        uses: actions/checkout@v3
+
+      # - name: Get zola
+      #   run: |
+      #     wget -q -O - \
+      #     "https://github.com/getzola/zola/releases/download/v0.16.1/zola-v0.16.1-x86_64-unknown-linux-gnu.tar.gz" \
+      #     | tar xzf - -C /usr/local/bin
+
+      # - name: Build
+      #   run: zola build
+      #   working-directory: {{ env.WORKING_DIRECTORY }}
+  
+
+      - name: Build and deploy
+        uses: shalzz/zola-deploy-action@v0.16.1
+        working-directory: {{ env.WORKING_DIRECTORY }}
+        env:
+          BUILD_DIR: docs
+          PAGES_BRANCH: gh-pages
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
