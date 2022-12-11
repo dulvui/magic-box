@@ -3,9 +3,6 @@ name: Deploy
 on:
   push:
 
-env:
-  WORKING_DIRECTORY: src
-
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -20,8 +17,8 @@ jobs:
           | tar xzf - -C /usr/local/bin
 
       - name: Run check
+        working-directory: src
         run: zola check
-        working-directory: {{ env.WORKING_DIRECTORY }}
   
   deploy:
     runs-on: ubuntu-latest
@@ -39,13 +36,13 @@ jobs:
 
       # - name: Build
       #   run: zola build
-      #   working-directory: {{ env.WORKING_DIRECTORY }}
+      #   working-directory: src
   
 
       - name: Build and deploy
         uses: shalzz/zola-deploy-action@v0.16.1
-        working-directory: {{ env.WORKING_DIRECTORY }}
         env:
-          BUILD_DIR: docs
+          BUILD_DIR: src
+          OUT_DIR: docs
           PAGES_BRANCH: gh-pages
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
