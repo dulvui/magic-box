@@ -2,6 +2,12 @@
 base_url = "https://example.com"
 title = "Simon Dalvai"
 
+# For overriding the default output directory `public`, set it to another value (e.g.: "docs")
+output_dir = "../docs"
+
+# When set to "true", the generated HTML files are minified.
+minify_html = true
+
 # Whether to automatically compile all Sass files in the sass directory
 compile_sass = true
 
