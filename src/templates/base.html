@@ -42,22 +42,21 @@
     {% block content %} {% endblock %}
   </div>
 
-
   <div class="icons">
     <a href="{{ config.extra.links.github | safe }}" target="_blank"><img class="icon"
-        src="/{{ config.extra.github | safe }}"></a>
+        src="{{ get_url(path='img/icons/github.svg') | safe }}"></a>
     <a href="{{ config.extra.links.githubsponsors | safe }}" target="_blank"><img class="icon"
-        src="/{{ config.extra.githubsponsors | safe }}"></a>
+        src="{{ get_url(path='img/icons/githubsponsors.svg') | safe }}"></a>
     <a href="{{ config.extra.links.kofi | safe }}" target="_blank"><img class="icon"
-        src="/{{ config.extra.kofi | safe }}"></a>
+        src="{{ get_url(path='img/icons/kofi.svg') | safe }}"></a>
     <a href="{{ config.extra.links.liberapay | safe }}" target="_blank"><img class="icon"
-        src="/{{ config.extra.liberapay | safe }}"></a>
+        src="{{ get_url(path='img/icons/liberapay.svg') | safe }}"></a>
     <a href="{{ config.extra.links.reddit | safe }}" target="_blank"><img class="icon"
-        src="/{{ config.extra.reddit | safe }}"></a>
+        src="{{ get_url(path='img/icons/reddit.svg') | safe }}"></a>
     <a href="{{ config.extra.links.linkedin | safe }}" target="_blank"><img class="icon"
-        src="/{{ config.extra.linkedin | safe }}"></a>
+        src="{{ get_url(path='img/icons/linkedin.svg') | safe }}"></a>
     <a href="{{ config.extra.links.mastodon | safe }}" target="_blank"><img class="icon"
-        src="/{{ config.extra.mastodon | safe }}"></a>
+        src="{{ get_url(path='img/icons/mastodon.svg') | safe }}"></a>
   </div>
 
 
