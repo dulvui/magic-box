@@ -28,7 +28,6 @@ jobs:
           | tar xzf - -C /usr/local/bin
 
       - name: Run check
-        working-directory: src
         run: zola check
   
   deploy:
@@ -47,7 +46,6 @@ jobs:
 
       - name: Build
         run: zola build
-        working-directory: src
 
       - name: Setup Pages
         uses: actions/configure-pages@v2
