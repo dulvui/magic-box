@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "dulvui.github.io/magic-box"
+base_url = "http://simondalvai.com/magic-box/"
 title = "Simon Dalvai"
 
 # For overriding the default output directory `public`, set it to another value (e.g.: "docs")
