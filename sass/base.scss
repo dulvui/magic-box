@@ -50,6 +50,14 @@ p {
     line-height: 1.4;
 }
 
+// applies to all code language classes, like language-html  
+pre[class^="language-"], pre[class*=" language-"]  {
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 49vw;
+}
+
 .nav {
     font-size: 4.5vw;
     font-weight: 300;
