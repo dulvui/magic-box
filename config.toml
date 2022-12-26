@@ -1,6 +1,6 @@
 # The URL the site will be built for
 base_url = "http://simondalvai.com/magic-box/"
-title = "Simon Dalvai"
+title = "Gianfranco Zola"
 
 # For overriding the default output directory `public`, set it to another value (e.g.: "docs")
 output_dir = "../docs"
@@ -17,12 +17,13 @@ build_search_index = false
 [markdown]
 # Whether to do syntax highlighting
 # Theme can be customised by setting the `highlight_theme` variable to a theme supported by Zola
-highlight_code = false
+highlight_code = true
+highlight_theme = "solarized-light"
 
 external_links_target_blank = true
 
 [extra]
-icon = "img/me.webp"
+icon = "img/icon.jpg"
 
 # simple-icons
 github = "img/icons/github.svg"
