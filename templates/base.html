@@ -15,8 +15,7 @@
     {% endblock title %}
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="{{ get_url(path='base.css', trailing_slash=false) | safe }}" />
-  <link rel="stylesheet" href="index.css" />
+  <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
 </head>
 
 <body>
@@ -37,6 +36,7 @@
       <!-- <a class="link nav nav-right" href="/support">Support me</a> -->
       <a class="link nav nav-right" href="/blog">Blog</a>
       <a class="link nav nav-right" href="/games">Games</a>
+
   </nav>
   <div id="content">
     {% block content %} {% endblock %}

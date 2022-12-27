@@ -1,0 +1,39 @@
+pre[class^="language-"],
+pre[class*=" language-"] {
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    max-width: 49vw;
+    overflow-wrap: unset;
+    white-space: pre;
+    padding-left: 0px;
+}
+
+.appstore {
+    background: url(img/AppStore.svg) no-repeat;
+    cursor: pointer;
+    border: none;
+    background-size: 9vw;
+    width: 9vw;
+    height: 3vw;
+    margin-right: 1vw;
+}
+
+.playstore {
+    background: url(img/PlayStore.svg) no-repeat;
+    cursor: pointer;
+    border: none;
+    background-size: 10vw;
+    width: 10vw;
+    height: 3vw;
+}
+
+#screenshots {
+    margin-top: 3vh;
+    display: flex;
+}
+
+.screenshot {
+    margin-right: 0.6vw;
+    width: 10vw;
+}
