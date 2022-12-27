@@ -10,6 +10,6 @@
 
   <!-- If you are using pagination, section.pages will be empty. You need to use the paginator object -->  
   {% for page in section.pages %}
-  <p><a class="link" href="{{ page.permalink | safe }}">{{ page.title }}</a> - {{ page.date }} </p>
+  <p><a class="link" href="{{ page.permalink | safe }}">{{ page.title }}</a> - {{ page.date | date(format="%d. %B %Y") }} </p>
   {% endfor %}
 {% endblock content %}
