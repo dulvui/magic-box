@@ -6,5 +6,5 @@ template = "games.html"
 page_template = "game.html"
 +++
 
-I create mobile games with [Godot Engine](https://godotengine.org) and [libGDX](https://libgdx.com) in my spare time.  
+I create mobile games with Godot Engine and libGDX in my spare time.  
 They all are **Open Source** with **zero ads** and **zero tracking**.
