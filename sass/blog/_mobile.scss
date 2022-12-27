@@ -1,0 +1,40 @@
+// applies to all code language classes, like language-html  
+pre[class^="language-"],
+pre[class*=" language-"] {
+    border: 1px solid black;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    max-width: 80vw;
+    overflow-wrap: break-word;
+    white-space: pre-line;
+}
+
+.appstore {
+    background: url(img/AppStore.svg) no-repeat;
+    cursor: pointer;
+    border: none;
+    background-size: 34.5vw;
+    width: 34.5vw;
+    height: 15vw;
+    margin-right: 1vw;
+}
+
+.playstore {
+    background: url(img/PlayStore.svg) no-repeat;
+    cursor: pointer;
+    border: none;
+    background-size: 38vw;
+    width: 38vw;
+    height: 15vw;
+}
+
+#screenshots {
+    margin-top: 3vh;
+    display: flex;
+}
+
+.screenshot {
+    margin-right: 0.6vw;
+    width: 18vw;
+}
