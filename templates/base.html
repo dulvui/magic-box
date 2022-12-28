@@ -22,6 +22,7 @@
   <nav>
     <!-- Loops over current path, max depth 2 -->
     <a class="link nav" href="/">simondalvai.com</a>
+    {% if current_path %}
     {% for path in current_path | split(pat="/") %}
     {% if path | wordcount > 0%}
     {% set path_length = current_path | split(pat="/") | length - 1 %}
@@ -32,6 +33,8 @@
       {% endif %}
       {% endif %}
       {% endfor %}
+      {% endif %}
+
       <!-- <a class="link nav nav-right" href="/about">About</a> -->
       <!-- <a class="link nav nav-right" href="/support">Support me</a> -->
       <a class="link nav nav-right" href="/blog">Blog</a>
@@ -42,26 +45,26 @@
     {% block content %} {% endblock %}
   </div>
 
-  <div class="icons">
-    <a href="{{ config.extra.links.github | safe }}" target="_blank"><img class="icon"
+  <div class="simple-icons">
+    <a href="{{ config.extra.links.github | safe }}" target="_blank"><img class="simple-icon"
         src="{{ get_url(path='img/icons/github.svg') | safe }}"></a>
-    <a href="{{ config.extra.links.githubsponsors | safe }}" target="_blank"><img class="icon"
+    <a href="{{ config.extra.links.githubsponsors | safe }}" target="_blank"><img class="simple-icon"
         src="{{ get_url(path='img/icons/githubsponsors.svg') | safe }}"></a>
-    <a href="{{ config.extra.links.kofi | safe }}" target="_blank"><img class="icon"
+    <a href="{{ config.extra.links.kofi | safe }}" target="_blank"><img class="simple-icon"
         src="{{ get_url(path='img/icons/kofi.svg') | safe }}"></a>
-    <a href="{{ config.extra.links.liberapay | safe }}" target="_blank"><img class="icon"
+    <a href="{{ config.extra.links.liberapay | safe }}" target="_blank"><img class="simple-icon"
         src="{{ get_url(path='img/icons/liberapay.svg') | safe }}"></a>
-    <a href="{{ config.extra.links.reddit | safe }}" target="_blank"><img class="icon"
+    <a href="{{ config.extra.links.reddit | safe }}" target="_blank"><img class="simple-icon"
         src="{{ get_url(path='img/icons/reddit.svg') | safe }}"></a>
-    <a href="{{ config.extra.links.linkedin | safe }}" target="_blank"><img class="icon"
+    <a href="{{ config.extra.links.linkedin | safe }}" target="_blank"><img class="simple-icon"
         src="{{ get_url(path='img/icons/linkedin.svg') | safe }}"></a>
-    <a href="{{ config.extra.links.mastodon | safe }}" target="_blank"><img class="icon"
+    <a href="{{ config.extra.links.mastodon | safe }}" target="_blank"><img class="simple-icon"
         src="{{ get_url(path='img/icons/mastodon.svg') | safe }}"></a>
   </div>
 
 
   <footer class="footer">
-    {% if 'blog' not in current_path %}
+    {% if current_path and 'blog' not in current_path %}
     <a class="link" href="privacy-policy">Privacy Policy</a>
     {% else %}
     <a class="link" href="/privacy-policy">Privacy Policy</a>
