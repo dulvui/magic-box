@@ -25,15 +25,6 @@ external_links_target_blank = true
 [extra]
 icon = "img/icon.jpg"
 
-# simple-icons
-github = "img/icons/github.svg"
-githubsponsors = "img/icons/githubsponsors.svg"
-kofi = "img/icons/kofi.svg"
-liberapay = "img/icons/liberapay.svg"
-mastodon = "img/icons/mastodon.svg"
-reddit = "img/icons/reddit.svg"
-linkedin = "img/icons/linkedin.svg"
-
 # links
 links.github = "https://github.com/dulvui"
 links.githubsponsors = "https://github.com/sponsors/dulvui"

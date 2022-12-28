@@ -1,6 +1,6 @@
 +++
 title = 'Sn4ke'
-description = "World's first Broomball video game."
+description = "World's first Broomball game."
 date = 2020-09-29
 aliases = ["sn4ke","sn4ke.html"]
 [extra]
