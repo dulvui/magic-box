@@ -10,7 +10,7 @@ body {
 
 #content {
     flex: 1;
-    margin-bottom: 10vh;
+    margin-bottom: 2vh;
 }
 
 h1 {
@@ -52,13 +52,14 @@ p {
 }
 
 
-.icons {
+.simple-icons {
     display: flex;
     justify-content: center;
 }
 
-.icon {
-    width: 8vw;
-    height: 8vw;
-    margin-right: 2.2vw;
+.simple-icon {
+    width: 9vw;
+    height: 9vw;
+    margin-right: 1vw;
+    margin-left: 1vw;
 }

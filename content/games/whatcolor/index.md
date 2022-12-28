@@ -1,6 +1,6 @@
 +++
 title = 'WhatColor'
-description = "World's first Broomball video game."
+description = "World's first Broomball game."
 date = 2019-10-29
 aliases = ["whatcolor","whatcolor.html"]
 [extra]
