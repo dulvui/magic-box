@@ -9,11 +9,15 @@
 <p>{{ page.extra.name | safe }} doesn't track you and has no third party libraries included. It is made with <a
                 class="link" a href="https://godotengine.org" target="_blank">Godot Engine</a> and it is licensed under
         the Free and Libre Open Source
+        {% if page.extra.licenselink and  page.extra.license%}
         <a class="link" a href="{{ page.extra.licenselink | safe }}" target="_blank">{{ page.extra.license | safe }}</a>
         license.
         <br>
+        {% endif %}
+        {% if page.extra.sourcecode %}
         You can find the source code on <a class="link" a href="{{ page.extra.sourcecode | safe }}"
                 target="_blank">GitHub</a>.
+        {% endif %}
 </p>
 <p>This policy is effective as of {{ page.date | safe }}. Any changes to this privacy policy can be found on <a
                 class="link" a href="{{ config.extra.repository | safe }}" target="_blank">GitHub</a> commit history of
