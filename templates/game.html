@@ -7,6 +7,13 @@
 
 {{ page.content | safe }}
 
+{% if page.extra.repo %}
+<p>
+  This game is Open Source on <a class="link" href="{{ page.extra.repo | safe}}" target="_blank">Github</a>!
+</p>
+{% endif %}
+
+
 <div>
   {% if page.extra.appstore_link != '' %}
 
