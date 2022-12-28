@@ -15,13 +15,13 @@
 
 
 <div>
-  {% if page.extra.appstore_link != '' %}
+  {% if page.extra.appstore_link %}
 
   <button class="appstore" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
   </button>
 
   {% endif %}
-  {% if page.extra.playstore_link != '' %}
+  {% if page.extra.playstore_link %}
 
   <button class="playstore" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
   </button>
