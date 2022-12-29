@@ -21,26 +21,28 @@
 
 <body>
   <nav>
-    <!-- Loops over current path, max depth 2 -->
+    <!-- Loops over current path, and creates the clickable url-->
     <a class="link nav" href="/">simondalvai.com</a>
+
     {% if current_path %}
-    {% for path in current_path | split(pat="/") %}
-    {% if path | wordcount > 0%}
-    {% set path_length = current_path | split(pat="/") | length - 1 %}
-    {% if loop.index < path_length %} <span class="dynamic-url">/<a class="link nav dynamic-url"
-        href="{{ current_path | split(pat='/') | slice(end=path_length - 1) | join(sep='/') }}">{{ path }}</a></span>
-      {% else %}
-      <span class="dynamic-url">/<a class="link nav" href="{{ current_path }}">{{ path }}</a></span>
-      {% endif %}
-      {% endif %}
+      {% set_global path_count = 1%}
+      {% set path_length = current_path | split(pat="/") | length - 1 %}
+      {% for path in current_path | split(pat="/") %}
+        {% if path | wordcount > 0 %}
+          {% if loop.index < path_length %}  
+            {% set partial_url=current_path | split(pat='/' ) | slice(end=path_count) | join(sep='/' ) %}
+            <span class="dynamic-url">/<a class="link nav dynamic-url" href="{{ partial_url }}">{{ path }}</a></span>
+            {% else %}
+            <span class="dynamic-url">/<a class="link nav" href="{{ current_path }}">{{ path }}</a></span>
+            {% endif %}
+        {% endif %}
+        {% set_global path_count = (path_count + 1)%}
       {% endfor %}
-      {% endif %}
+    {% endif %}
 
-      <!-- <a class="link nav nav-right" href="/about">About</a> -->
-      <!-- <a class="link nav nav-right" href="/support">Support me</a> -->
-      <a class="link nav nav-right" href="/blog">Blog</a>
-      <a class="link nav nav-right" href="/games">Games</a>
 
+    <a class="link nav nav-right" href="/blog">Blog</a>
+    <a class="link nav nav-right" href="/games">Games</a>
   </nav>
   <div id="content">
     {% block content %} {% endblock %}
