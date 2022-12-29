@@ -1,10 +1,10 @@
-.link {
+a {
     text-decoration: none;
     color: #121314;
     position: relative;
 }
 
-.link:after {
+a:after {
     content: '';
     position: absolute;
     z-index: -1;
@@ -16,7 +16,7 @@
     background-color: $link-color;
 }
 
-.link:hover:after {
+a:hover:after {
     top: 0%;
 }
 

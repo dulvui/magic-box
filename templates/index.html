@@ -3,54 +3,50 @@
 {% block content %}
 
 <div class="top-row">
-  <h1>Hello.</h1> <img class="selfie" src="{{ config.extra.icon | safe }}"
-    alt="An image of myself">
+  <h1>Hello.</h1> <img class="selfie" src="{{ config.extra.icon | safe }}" alt="An image of myself">
 </div>
 <h2>{{ section.extra.introduction | safe }}</h2>
 
 {{ section.content | safe }}
 
 
-<h2><a class="link" href="/games">Games</a></h2>
+<h2><a  href="/games">Games</a></h2>
 
 {% set games = get_section(path="games/_index.md") %}
 {% for page in games.pages | slice(end=3) %}
 <!-- filter out pages that are not projects, like 'About' -->
 {% if page.title != 'About' %}
 <div class="game">
-  <a href="{{ page.permalink | safe }}">
-    <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon">
-  </a>
-  <a class="link title-games" href="{{ page.permalink | safe }}">
+  <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon"
+    onClick="window.open('{{ page.permalink }}')" role="button" tabIndex="0">
+  <a class="title-games" href="{{ page.permalink | safe }}">
     {{ page.title }}</a>
   <p id="game-description">{{ page.description | safe }}</p>
   <div>
     {% if page.extra.appstore_link %}
-  
-    <button class="index-appstore"
-      onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
+
+    <button class="index-appstore" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') " role="button" tabIndex="0">
     </button>
-  
+
     {% endif %}
     {% if page.extra.playstore_link %}
-  
-    <button class="index-playstore"
-      onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
+
+    <button class="index-playstore" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') " role="button" tabIndex="0">
     </button>
     {% endif %}
-  
+
   </div>
 </div>
 {% endif %}
 {% endfor %}
 
-<!-- <p><a class="link" href="games">More games...</a></p> -->
+<!-- <p><a  href="games">More games...</a></p> -->
 
-<h2><a class="link" href="/blog">Blog</a></h2>
+<h2><a  href="/blog">Blog</a></h2>
 
 {% set blog = get_section(path="blog/_index.md") %}
 {% for page in blog.pages | slice(end=3) %}
-<p><a class="link" href="{{ page.permalink | safe }}">{{ page.title }}</a></p>
+<p><a  href="{{ page.permalink | safe }}">{{ page.title }}</a></p>
 {% endfor %}
 
 {% endblock content %}
