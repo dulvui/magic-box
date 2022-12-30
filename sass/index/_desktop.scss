@@ -1,3 +1,21 @@
+.top-row {
+    display: flex;
+}
+
+#hello {
+    font-size: 5vw;
+    font-weight: 500;
+    margin-bottom: 10px;
+    margin-left: 0px;
+}
+
+#introduction {
+    font-size: 2vw;
+    font-weight: 500;
+    margin-bottom: 0;
+    margin-top: 10px;
+}
+
 .index-appstore {
     background: url(img/AppStore.svg) no-repeat;
     cursor: pointer;
@@ -21,10 +39,6 @@
     font-size: 1vw;
 }
 
-
-.top-row {
-    display: flex;
-}
 
 .selfie {
     width: 8vw;

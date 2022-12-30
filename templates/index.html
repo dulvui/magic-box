@@ -3,9 +3,9 @@
 {% block content %}
 
 <div class="top-row">
-  <h1>Hello.</h1> <img class="selfie" src="{{ config.extra.icon | safe }}" alt="An image of myself">
+  <span id="hello">Hello.</span> <img class="selfie" src="{{ config.extra.icon | safe }}" alt="An image of myself">
 </div>
-<h2>{{ section.extra.introduction | safe }}</h2>
+<div id="introduction">{{ section.extra.introduction | safe }}</div>
 
 {{ section.content | safe }}
 
