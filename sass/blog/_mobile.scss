@@ -1,13 +1,9 @@
 // applies to all code language classes, like language-html  
 pre[class^="language-"],
 pre[class*=" language-"] {
-    border: 1px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    padding-left: 10px;
+    padding: 15px 0px 15px 0px;
     max-width: 80vw;
-    overflow-wrap: break-word;
-    white-space: pre-line;
+    overflow: auto;
 }
 
 .appstore {

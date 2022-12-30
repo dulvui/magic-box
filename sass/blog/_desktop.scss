@@ -1,13 +1,10 @@
 pre[class^="language-"],
 pre[class*=" language-"] {
-    border: 1px solid black;
-    padding-top: 10px;
-    padding-bottom: 10px;
-    max-width: 49vw;
-    overflow-wrap: unset;
-    white-space: pre;
-    padding-left: 0px;
+    padding: 15px 0px 15px 0px;
+    max-width: 50vw;
+    overflow: auto;
 }
+
 
 .appstore {
     background: url(img/AppStore.svg) no-repeat;
