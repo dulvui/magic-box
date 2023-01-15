@@ -1,9 +1,10 @@
 #screenshots {
     margin-top: 3vh;
     display: flex;
+    overflow: auto;
 }
 
 .screenshot {
-    margin-right: 0.6vw;
-    width: 18vw;
+    margin-right: 3vw;
+    width: 70vw;
 }
