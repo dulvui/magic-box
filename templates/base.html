@@ -4,35 +4,13 @@
 {% include 'partials/head.html' %}
 
 <body>
-  <nav>
-    <!-- Loops over current path, and creates the clickable url-->
-    <a class="nav" href="/">simondalvai.com</a>
+  {% include 'partials/nav.html' %}
 
-    {% if current_path %}
-    {% set_global path_count = 1%}
-    {% set path_length = current_path | split(pat="/") | length - 1 %}
-    {% for path in current_path | split(pat="/") %}
-    {% if path | wordcount > 0 %}
-    {% if loop.index < path_length %} {% set partial_url=current_path | split(pat='/' ) | slice(end=path_count) |
-      join(sep='/' ) %} <span class="dynamic-url">/<a class="nav dynamic-url" href="{{ partial_url }}">{{ path
-        }}</a></span>
-      {% else %}
-      <span class="dynamic-url">/<a class="nav" href="{{ current_path }}">{{ path }}</a></span>
-      {% endif %}
-      {% endif %}
-      {% set_global path_count = (path_count + 1)%}
-      {% endfor %}
-      {% endif %}
-
-
-      <a class="nav nav-right" href="/blog">Blog</a>
-      <a class="nav nav-right" href="/games">Games</a>
-  </nav>
   <div id="content">
     {% block content %} {% endblock %}
   </div>
 
-{% include 'partials/footer.html' %}
+  {% include 'partials/footer.html' %}
 
 </body>
 
