@@ -1,23 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 
-<head>
-  <meta charset="utf-8">
-  <title>
-    {% block title %}
-    {% if page.title %}
-    {{ page.title }} - {{ config.title }}
-    {% elif section.title and section.title != config.title %}
-    {{ section.title }} - {{ config.title }}
-    {% else %}
-    {{ config.title }}
-    {%- endif %}
-    {% endblock title %}
-  </title>
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
-  <link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico', trailing_slash=false) | safe }}">
-</head>
+{% include 'partials/head.html' %}
 
 <body>
   <nav>
@@ -48,29 +32,8 @@
     {% block content %} {% endblock %}
   </div>
 
-  <div class="simple-icons">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/github.svg') | safe }}"
-      onclick="window.open( '{{ config.extra.links.github }}', '_blank') " role="button" tabIndex="0">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/githubsponsors.svg') | safe }}"
-      onclick="window.open( '{{ config.extra.links.githubsponsors }}', '_blank') " role="button" tabIndex="0">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/kofi.svg') | safe }}"
-      onclick="window.open( '{{ config.extra.links.kofi }}', '_blank') " role="button" tabIndex="0">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/liberapay.svg') | safe }}"
-      onclick="window.open( '{{ config.extra.links.liberapay }}', '_blank') " role="button" tabIndex="0">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/reddit.svg') | safe }}"
-      onclick="window.open( '{{ config.extra.links.reddit }}', '_blank') " role="button" tabIndex="0">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/linkedin.svg') | safe }}"
-      onclick="window.open( '{{ config.extra.links.linkedin }}', '_blank') " role="button" tabIndex="0">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/mastodon.svg') | safe }}"
-      onclick="window.open( '{{ config.extra.links.mastodon }}', '_blank') " role="button" tabIndex="0">
-  </div>
+{% include 'partials/footer.html' %}
 
-
-  <footer class="footer">
-    <a  href="/privacy-policy">Privacy Policy</a>
-    | &copy 2022 Simon Dalvai |
-    <a  a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
-  </footer>
 </body>
 
 </html>
