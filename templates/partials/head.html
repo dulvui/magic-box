@@ -12,6 +12,12 @@
     {% endblock title %}
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  {% if page.description %}
+  <meta property="description" content="{{ page.description }}" />
+  {% endif %}
+
+
   <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
   <link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico', trailing_slash=false) | safe }}">
 </head>
