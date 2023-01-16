@@ -17,7 +17,7 @@
 <!-- filter out pages that are not projects, like 'About' -->
 {% if page.title != 'About' %}
 <div class="game">
-  <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }}icon"
+  <img class="icon-games" src="{{ page.extra.icon | safe }}" alt="{{ page.title }} icon"
     onClick="window.open('{{ page.permalink }}')" role="button" tabIndex="0">
   <a class="title-games" href="{{ page.permalink | safe }}">
     {{ page.title }}</a>
@@ -25,13 +25,13 @@
   <div>
     {% if page.extra.appstore_link %}
 
-    <button class="index-appstore" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') " role="button" tabIndex="0">
+    <button class="index-appstore" alt="Download on the App Store" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') " role="button" tabIndex="0">
     </button>
 
     {% endif %}
     {% if page.extra.playstore_link %}
 
-    <button class="index-playstore" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') " role="button" tabIndex="0">
+    <button class="index-playstore" alt="Get it on Google Play" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') " role="button" tabIndex="0">
     </button>
     {% endif %}
 

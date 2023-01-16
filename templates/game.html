@@ -17,13 +17,13 @@
 <div>
   {% if page.extra.appstore_link %}
 
-  <button class="appstore" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
+  <button class="appstore" alt="Download on the App Store" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
   </button>
 
   {% endif %}
   {% if page.extra.playstore_link %}
 
-  <button class="playstore" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
+  <button class="playstore" alt="Get it on Google Play" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
   </button>
   {% endif %}
 
@@ -32,7 +32,7 @@
 <div id="screenshots">
   {% for asset in page.assets -%}
   {%- if asset is matching("[.](jpg|png)$") -%}
-  <img class="screenshot" src="{{ get_url(path=asset) }}" />
+  <img class="screenshot" alt="Screenshot of the game" src="{{ get_url(path=asset) }}" />
   {%- endif %}
   {%- endfor %}
 </div>
