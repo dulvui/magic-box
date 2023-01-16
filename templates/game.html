@@ -31,7 +31,7 @@
 
 <div id="screenshots">
   {% for asset in page.assets -%}
-  {%- if asset is matching("[.](jpg|png)$") -%}
+  {%- if asset is matching("[.](jpg|png|webp)$") -%}
   <img class="screenshot" alt="Screenshot of the game" src="{{ get_url(path=asset) }}" />
   {%- endif %}
   {%- endfor %}
