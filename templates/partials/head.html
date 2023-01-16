@@ -13,12 +13,17 @@
   </title>
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
+  {% block seo %}
   {% if page.description %}
-  <meta property="description" content="{{ page.description }}" />
+  <meta name="description" content="{{ page.description }}">
   {% elif page.title %}
-  <meta property="description" content="{{ page.title }}" />
+  <meta name="description" content="{{ page.title }}">
+  {% elif section.description %}
+  <meta name="description" content="{{ section.description }}">
+  {% elif section.title %}
+  <meta name="description" content="{{ section.title }}">
   {% endif %}
-
+  {% endblock seo %}
 
   <link rel="stylesheet" href="{{ get_url(path='style.css', trailing_slash=false) | safe }}">
   <link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico', trailing_slash=false) | safe }}">

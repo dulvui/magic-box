@@ -25,13 +25,13 @@
   <div>
     {% if page.extra.appstore_link %}
 
-    <button class="index-appstore" alt="Download on the App Store" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') " role="button" tabIndex="0">
+    <button class="index-appstore" title="Download on the App Store" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') " role="button" tabIndex="0">
     </button>
 
     {% endif %}
     {% if page.extra.playstore_link %}
 
-    <button class="index-playstore" alt="Get it on Google Play" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') " role="button" tabIndex="0">
+    <button class="index-playstore" title="Get it on Google Play" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') " role="button" tabIndex="0">
     </button>
     {% endif %}
 
