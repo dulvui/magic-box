@@ -11,27 +11,7 @@
 {% for page in games.pages %}
 <!-- filter out pages that are not projects, like 'About' -->
 {% if page.extra.type == 'Godot' %}
-<div class="game">
-  <img class="icon-games" src="/{{ page.extra.icon | safe }}" alt="{{ page.title }} icon"
-    onclick="window.open('{{ page.permalink }}') " role="button" tabIndex="0">
-  <a class="title-games" href="{{ page.permalink | safe }}">
-    {{ page.title }}</a>
-  <p id="game-description">{{ page.description | safe }}</p>
-  <div>
-    {% if page.extra.appstore_link %}
-
-    <button class="index-appstore" title="Download on the App Store" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
-    </button>
-
-    {% endif %}
-    {% if page.extra.playstore_link %}
-
-    <button class="index-playstore" title="Get it on Google Play" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
-    </button>
-    {% endif %}
-
-  </div>
-</div>
+{% include 'partials/game-box.html' %}
 {% endif %}
 {% endfor %}
 
@@ -40,29 +20,8 @@
 
 {% set games = get_section(path="games/_index.md") %}
 {% for page in games.pages %}
-<!-- filter out pages that are not projects, like 'About' -->
 {% if page.extra.type == 'libGDX' %}
-<div class="game">
-  <img class="icon-games" src="/{{ page.extra.icon | safe }}" alt="{{ page.title }}icon"
-    onclick="window.open('{{ page.permalink }}') " role="button" tabIndex="0">
-  <a class="title-games" href="{{ page.permalink | safe }}">
-    {{ page.title }}</a>
-  <p id="game-description">{{ page.description | safe }}</p>
-  <div>
-    {% if page.extra.appstore_link %}
-
-    <button class="index-appstore" title="Download on the App Store" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
-    </button>
-
-    {% endif %}
-    {% if page.extra.playstore_link %}
-
-    <button class="index-playstore" title="Get it on Google Play" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
-    </button>
-    {% endif %}
-
-  </div>
-</div>
+{% include 'partials/game-box.html' %}
 {% endif %}
 {% endfor %}
 {% endblock content %}

@@ -30,13 +30,13 @@ p {
 #navbar {
     margin: 0vh 9.5vw 0vh 9.5vw;
     padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    padding-bottom: 0.5vw;
     z-index: 3;
     background-color: $background-color;
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 80vw;
-    padding-bottom: 0.5vw;
     border-bottom: #121314 1px solid;
     display: flex;
 }
@@ -50,6 +50,10 @@ p {
     font-weight: 300;
 }
 
+.nav-right {
+    margin-left: 2vw;
+}
+
 .dynamic-url {
     display: initial;
 }
@@ -60,24 +64,11 @@ p {
     padding: 1vh 10vw 0vh 10vw;
 }
 
-.game {
-    display: inline-table;
-    width: 24vw;
-    margin-top: 2vw;
-}
-
-.icon-games {
-    float: left;
-    padding-right: 1.5vw;
-    padding-left: 0.5vw;
-    width: 7vw;
-    height: 7vw;
-}
 
 .simple-icons {
     display: flex;
     justify-content: center;
-    margin-top: 6vh;
+    margin-top: 1vh;
 }
 
 .simple-icon {

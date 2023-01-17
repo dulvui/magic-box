@@ -1,18 +1,25 @@
 $background-color: #FDF6E3;
 $link-color: #bb000080;
 
-@import 'index/mobile';
-@import 'blog/mobile';
-@import 'base/mobile';
-@import 'game/mobile';
+
 @import 'font';
 @import 'link';
 
-/* desktop */
+/* mobile */
+@media only screen and (max-width: 932px) {
+    @import 'base/mobile';
+    @import 'index/mobile';
+    @import 'blog/mobile';
+    @import 'game/mobile';
+    @import 'game-box/mobile';
 
+}
+
+/* desktop */
 @media only screen and (min-width: 932px) {
     @import 'base/desktop';
     @import 'index/desktop';
     @import 'blog/desktop';
     @import 'game/desktop';
+    @import 'game-box/desktop';
 }

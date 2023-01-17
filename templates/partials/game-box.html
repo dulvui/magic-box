@@ -1,0 +1,24 @@
+<div class="game-box">
+    <div class="game-box-left">
+        <img class="game-icon" src="{{ page.extra.icon | safe }}" alt="{{ page.title }} icon"
+            onClick="window.open('{{ page.permalink }}')" role="button" tabIndex="0">
+    </div>
+    <div class="game-box-right">
+        <div class="game-title">
+            <a href="{{ page.permalink | safe }}">
+                {{ page.title }}</a>
+        </div>
+        <div class="game-description">{{ page.description | safe }}</div>
+        <div>
+            {% if page.extra.playstore_link %}
+            <img class="playstore" src="{{ get_url(path='img/PlayStore.svg') }}" alt="Get it on Google Play"
+                onClick="window.open('{{ page.extra.playstore_link }}', '_blank')" role="button" tabIndex="0">
+            {% endif %}
+            {% if page.extra.appstore_link %}
+            <img class="appstore" src="{{ get_url(path='img/AppStore.svg') }}" alt="Download on the App Store"
+                onClick="window.open('{{ page.extra.appstore_link }}', '_blank')" role="button" tabIndex="0">
+
+            {% endif %}
+        </div>
+    </div>
+</div>
