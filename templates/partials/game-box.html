@@ -1,6 +1,6 @@
 <div class="game-box">
     <div class="game-box-left">
-        <img class="game-icon" src="{{ page.extra.icon | safe }}" alt="{{ page.title }} icon"
+        <img class="game-icon" src="{{ get_url(path=page.extra.icon) }}" alt="{{ page.title }} icon"
             onClick="window.open('{{ page.permalink }}')" role="button" tabIndex="0">
     </div>
     <div class="game-box-right">
