@@ -4,25 +4,25 @@
 <h2>{{ page.title | safe }} </h2>
 
 <p>{{ page.extra.name | safe }} <strong>doesn't collect or share any data</strong>.</p>
-<p>No personal, tracking or any other type of data is leaving your device at all and so it can't even reach the internet
+<p>No personal data, tracking data or any other type of data is leaving your device at all and so it can't even reach
+        the Internet.
 </p>
-<p>{{ page.extra.name | safe }} doesn't track you and has no third party libraries included. It is made with <a
-                 a href="https://godotengine.org" target="_blank">Godot Engine</a> and it is licensed under
-        the Free and Libre Open Source
-        {% if page.extra.licenselink and  page.extra.license%}
-        <a  a href="{{ page.extra.licenselink | safe }}" target="_blank">{{ page.extra.license | safe }}</a>
-        license.
-        <br>
+<p>{{ page.extra.name | safe }} is made with <a a href="{{ page.extra.toollink | safe }}" target="_blank">{{
+                page.extra.tool | safe }}</a> and it is licensed under
+        the free and libre Open Source
+        {% if page.extra.licenselink and page.extra.license%}
+        <a a href="{{ page.extra.licenselink | safe }}" target="_blank">{{ page.extra.license | safe }}</a>
+        license. It doesn't track you and has no third party libraries included.
+
         {% endif %}
         {% if page.extra.sourcecode %}
-        You can find the source code on <a  a href="{{ page.extra.sourcecode | safe }}"
-                target="_blank">GitHub</a>.
+        You can find the source code on <a a href="{{ page.extra.sourcecode | safe }}" target="_blank">GitHub</a>.
         {% endif %}
 </p>
-<p>This policy is effective as of {{ page.date | safe }}. Any changes to this privacy policy can be found on <a
-                 a href="{{ config.extra.repository | safe }}" target="_blank">GitHub</a> commit history of
+<p>This policy is effective as of {{ page.updated | safe | date(format="%d. %B %Y") }}. Any changes to this privacy policy can be found on <a a
+                href="{{ config.extra.repository | safe }}" target="_blank">GitHub</a> commit history of
         this website.</p>
-<p>If you have questions send me a mail at <a  href="mailto:{{ config.extra.email | safe }}">{{
+<p>If you have questions send me a mail at <a href="mailto:{{ config.extra.email | safe }}">{{
                 config.extra.email | safe }}</a>.</p>
 
 {% endblock content %}
