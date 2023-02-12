@@ -10,7 +10,7 @@
 {{ section.content | safe }}
 
 
-<h2><a  href="/games">Games</a></h2>
+<h2><a href="/games">Games</a></h2>
 
 {% set games = get_section(path="games/_index.md") %}
 {% for page in games.pages | slice(end=3) %}

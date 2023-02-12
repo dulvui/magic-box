@@ -1,0 +1,24 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>
+    {{ page.title }}
+</h1>
+
+{{ page.content | safe }}
+
+<p>
+    🍺 Get me a beer on <a href="{{ config.extra.links.paypal }}" target="_blank">PayPal</a><br>
+    ☕ Buy me a coffee on <a href="{{ config.extra.links.kofi }}" target="_blank">Ko-fi</a><br>
+    🤗 Show your support on <a href="{{ config.extra.links.githubsponsors }}" target="_blank">Github</a><br>
+    💰 Share some coins on <a href="{{ config.extra.links.liberapay }}" target="_blank">Liberapay</a>
+</p>
+
+
+<h2>Affiliate links</h2>
+<p>You can support me also by using my affiliate links.</p>
+<div>
+    <p>👨‍💻 Create a account on  <a href="{{ config.extra.links.hetzner }}" target="_blank">Hetzner</a></p>
+</div>
+
+{% endblock content %}
