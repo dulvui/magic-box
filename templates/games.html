@@ -8,7 +8,7 @@
 <h2>Godot Engine</h2>
 
 {% set games = get_section(path="games/_index.md") %}
-{% for page in games.pages %}
+{% for page in games.pages | filter(attribute="extra.released", value=true) %}
 <!-- filter out pages that are not projects, like 'About' -->
 {% if page.extra.type == 'Godot' %}
 {% include 'partials/game-box.html' %}
@@ -19,9 +19,22 @@
 <h2>libGDX</h2>
 
 {% set games = get_section(path="games/_index.md") %}
-{% for page in games.pages %}
+{% for page in games.pages | filter(attribute="extra.released", value=true) %}
 {% if page.extra.type == 'libGDX' %}
 {% include 'partials/game-box.html' %}
 {% endif %}
 {% endfor %}
+
+
+{% set games = get_section(path="games/_index.md") %}
+{% set coming_soon  = games.pages | filter(attribute="extra.released", value=false) %}
+
+{% if coming_soon | length > 0 %}
+
+<h2>Coming soon...</h2>
+
+{% for page in coming_soon  %}
+{% include 'partials/game-box.html' %}
+{% endfor %}
+{% endif %}
 {% endblock content %}
