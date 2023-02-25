@@ -15,6 +15,11 @@
 
 
 <div>
+  {% if page.extra.fdroid_link %}
+
+  <img class="playstore-big" src="{{ get_url(path='img/get-it-on-en.webp') }}" alt="Get it on F-Droid"
+      onClick="window.open('{{ page.extra.fdroid_link }}', '_blank')" role="button" tabIndex="0">
+  {% endif %}
   {% if page.extra.playstore_link %}
 
   <img class="playstore-big" src="{{ get_url(path='img/PlayStore.svg') }}" alt="Get it on Google Play"
