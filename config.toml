@@ -27,6 +27,7 @@ icon = "img/icon.jpg"
 
 # links
 links.github = "https://github.com/dulvui"
+links.codeberg = "https://codeberg.org/dulvui"
 links.mastodon = "https://mastodon.social/@dulvui"
 links.reddit = "https://reddit.com/user/dulvui"
 links.linkedin = "https://www.linkedin.com/in/simon-dalvai"
