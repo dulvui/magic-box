@@ -1,16 +1,22 @@
 <div class="simple-icons">
     <img class="simple-icon" src="{{ get_url(path='img/icons/github.svg') | safe }}" alt="github button"
-        onclick="window.open( '{{ config.extra.links.github }}', '_blank') " role="button" tabIndex="0">
-        <img class="simple-icon" src="{{ get_url(path='img/icons/codeberg.svg') | safe }}" alt="codeberg button"
-        onclick="window.open( '{{ config.extra.links.codeberg }}', '_blank') " role="button" tabIndex="0">
+        onclick="window.open( '{{ config.extra.links.github }}', '_blank')" role="button"
+        onauxclick="window.open( '{{ config.extra.links.github }}', '_blank')" tabIndex="0">
+    <img class="simple-icon" src="{{ get_url(path='img/icons/codeberg.svg') | safe }}" alt="codeberg button"
+        onclick="window.open( '{{ config.extra.links.codeberg }}', '_blank') " role="button"
+        onauxclick="window.open( '{{ config.extra.links.codeberg }}', '_blank')" tabIndex="0">
     <img class="simple-icon" src="{{ get_url(path='img/icons/reddit.svg') | safe }}" alt="reddit button"
-        onclick="window.open( '{{ config.extra.links.reddit }}', '_blank') " role="button" tabIndex="0">
+        onclick="window.open( '{{ config.extra.links.reddit }}', '_blank') " role="button"
+        onauxclick="window.open( '{{ config.extra.links.reddit }}', '_blank')" tabIndex="0">
     <img class="simple-icon" src="{{ get_url(path='img/icons/linkedin.svg') | safe }}" alt="linkedin button"
-        onclick="window.open( '{{ config.extra.links.linkedin }}', '_blank') " role="button" tabIndex="0">
+        onclick="window.open( '{{ config.extra.links.linkedin }}', '_blank') " role="button"
+        onauxclick="window.open( '{{ config.extra.links.linkedin }}', '_blank')" tabIndex="0">
     <img class="simple-icon" src="{{ get_url(path='img/icons/mastodon.svg') | safe }}" alt="mastodon button"
-        onclick="window.open( '{{ config.extra.links.mastodon }}', '_blank') " role="button" tabIndex="0">
+        onclick="window.open( '{{ config.extra.links.mastodon }}', '_blank') " role="button"
+        onauxclick="window.open( '{{ config.extra.links.mastodon }}', '_blank')" tabIndex="0">
     <img class="simple-icon" src="{{ get_url(path='img/icons/mail.svg') | safe }}" alt="email button"
-        onclick="window.open('mailto:{{config.extra.email}}', '_self')" role="button" tabIndex="0">
+        onclick="window.open('mailto:{{config.extra.email}}', '_self')" role="button"
+        onauxclick="window.open('mailto:{{config.extra.email}}', '_self')" tabIndex="0">
     <!-- <img class="simple-icon" src="{{ get_url(path='img/icons/paypal.svg') | safe }}" alt="paypal button"
     onclick="window.open( '{{ config.extra.links.paypal }}', '_blank') " role="button" tabIndex="0">
     <img class="simple-icon" src="{{ get_url(path='img/icons/kofi.svg') | safe }}" alt="ko-fi button"
