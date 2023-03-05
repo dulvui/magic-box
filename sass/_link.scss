@@ -9,8 +9,8 @@ a:after {
     position: absolute;
     z-index: -1;
     top: 60%;
-    left: -0.1em;
-    right: -0.1em;
+    left: -0.05em;
+    right: -0.05em;
     bottom: 0;
     transition: top 200ms cubic-bezier(0, 0.8, 0.13, 1);
     background-color: $link-color;

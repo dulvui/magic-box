@@ -4,7 +4,7 @@ description = "World's first Broomball game."
 date = 2021-09-29
 aliases = ["pocketbroomball","pocketbroomball.html"]
 [extra]
-icon = 'img/pocket-broomball.svg'
+icon = 'img/game-icons/pocket-broomball.svg'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.broomball'
 appstore_link = 'https://apps.apple.com/app/pocket-broomball/id1511009171'
 type = 'Godot'

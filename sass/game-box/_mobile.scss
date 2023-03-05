@@ -1,17 +1,17 @@
 .game-box {
     padding-top: 3vw;
     padding-bottom: 3vw;
-    width: 80vw;
+    width: 85vw;
+    height: 28vw;
     margin-top: 3vw;
 }
 
 .game-icon {
     float: left;
     padding-right: 1.5vw;
-    padding-left: 0.5vw;
     margin-right: 3vw;
-    width: 22vw;
-    height: 22vw;
+    width: 30vw;
+    height: 30vw;
 }
 
 
@@ -27,13 +27,9 @@
     font-size: 4vw;
 }
 
-.appstore {
-    cursor: pointer;
-    width: 22.2vw;
-}
 
-.playstore {
+.store-icon {
     cursor: pointer;
-    width: 24.5vw;
+    height: 7vw;
     margin-right: 2vw;
 }

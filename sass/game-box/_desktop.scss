@@ -2,14 +2,14 @@
     display: inline-table;
     width: 24vw;
     margin-top: 2vw;
+    padding-right: 0.5vw;
 }
 
 .game-icon {
     float: left;
     padding-right: 1.5vw;
-    padding-left: 0.5vw;
-    width: 7vw;
-    height: 7vw;
+    width: 8.7vw;
+    height: 8.7vw;
     cursor: pointer;
 }
 
@@ -25,14 +25,9 @@
     font-weight: 300;
 }
 
-
-.appstore {
+.store-icon {
     cursor: pointer;
-    width: 5.5vw;
-}
-
-.playstore {
-    cursor: pointer;
-    width: 6.2vw;
+    height: 1.7vw;
     margin-right: 0.5vw;
+    margin-bottom: 0.2vw;
 }
