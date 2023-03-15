@@ -48,7 +48,12 @@ p {
     position: fixed;
     top: 0;
     width: 85vw;
-    border-bottom: #121314 1px solid;
+    border-bottom: $background-color-dark 1px solid;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $background-color-dark;
+        border-bottom: $background-color-light 1px solid;
+    }
     display: flex;
 }
 
@@ -97,7 +102,10 @@ p {
     padding: 0.5vh 1vw 0.5vh 1vw;
     font-weight: 300;
     font-size: 3vw;
-    border-top: #121314 1px solid;
+    border-top: $background-color-dark 1px solid;
+    @media (prefers-color-scheme: dark) {
+        border-top: $background-color-light 1px solid;
+    }
     width: 85vw;
     text-align: center;
 }

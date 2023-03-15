@@ -42,16 +42,17 @@ p {
     padding-bottom: 0.5vw;
     z-index: 3;
     background-color: $background-color-light;
+    border-bottom: $background-color-dark 1px solid;
 
     @media (prefers-color-scheme: dark) {
         background-color: $background-color-dark;
+        border-bottom: $background-color-light 1px solid;
     }
 
     overflow: hidden;
     position: fixed;
     top: 0;
     width: 80vw;
-    border-bottom: #121314 1px solid;
     display: flex;
 }
 
@@ -91,6 +92,7 @@ p {
     margin-right: 0.5vw;
     margin-left: 0.5vw;
     cursor: pointer;
+
     @media (prefers-color-scheme: dark) {
         filter: invert(1);
     }
@@ -101,7 +103,11 @@ p {
     font-size: 1vw;
     margin: 2vh 9.5vw 0vh 9.5vw;
     padding: 0.5vh 0.5vw 0.5vh 0.5vw;
-    border-top: #121314 1px solid;
+    border-top: $background-color-dark 1px solid;
+
+    @media (prefers-color-scheme: dark) {
+        border-top: $background-color-light 1px solid;
+    }
     width: 80vw;
     bottom: 0px;
     text-align: center;
