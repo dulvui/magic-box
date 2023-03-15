@@ -1,6 +1,12 @@
-$background-color: #FDF6E3;
-$link-color: #bb000080;
 
+$background-color-light: #FDF6E3;
+$background-color-dark: #002b36;
+
+$link-color-light: #bb000080;
+$link-color-dark: #53f5c480;
+
+$font-color-light: $background-color-dark;
+$font-color-dark: $background-color-light;
 
 @import 'font';
 @import 'link';

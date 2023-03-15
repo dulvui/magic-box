@@ -1,8 +1,14 @@
 .game-box {
     display: inline-table;
     width: 24vw;
+    height: 8vw;
     margin-top: 2vw;
     padding-right: 0.5vw;
+}
+
+.game-box-right{
+    display: flex;
+    flex-direction: column;
 }
 
 .game-icon {
@@ -23,6 +29,7 @@
     margin-top: 1vw;
     margin-bottom: 1vw;
     font-weight: 300;
+    flex: 1;
 }
 
 .store-icon {

@@ -6,6 +6,15 @@
     margin-top: 3vw;
 }
 
+.game-box-right{
+    display: flex;
+    flex-direction: column;
+}
+
+.game-box-right-separator{
+    flex: 1;
+}
+
 .game-icon {
     float: left;
     padding-right: 1.5vw;
@@ -16,6 +25,7 @@
 
 
 .game-title {
+    display: flex;
     font-weight: 500;
     font-size: 5vw;
 }
@@ -25,8 +35,12 @@
     margin-bottom: 2vw;
     font-weight: 300;
     font-size: 4vw;
+    display: flex;
 }
 
+.store-icons{
+    display: flex;
+}
 
 .store-icon {
     cursor: pointer;
