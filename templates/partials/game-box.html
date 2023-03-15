@@ -9,27 +9,29 @@
                 {{ page.title }}</a>
         </div>
         <div class="game-description">{{ page.description | safe }}</div>
-        <div>
-            {% if page.extra.playstore_link %}
-            <img class="store-icon" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}"
-                alt="Get it on Google Play" onClick="window.open('{{ page.extra.playstore_link }}', '_blank')"
-                role="button" tabIndex="0">
-            {% endif %}
-            {% if page.extra.appstore_link %}
-            <img class="store-icon" src="{{ get_url(path='img/store-icons/AppStore.webp') }}"
-                alt="Download on the App Store" onClick="window.open('{{ page.extra.appstore_link }}', '_blank')"
-                role="button" tabIndex="0">
-            {% endif %}
-        </div>
-        <div>
-            {% if page.extra.fdroid_link %}
-            <img class="store-icon" src="{{ get_url(path='img/store-icons/FDroid.webp') }}" alt="Get it on F-Droid"
-                onClick="window.open('{{ page.extra.fdroid_link }}', '_blank')" role="button" tabIndex="0">
-            {% endif %}
-            {% if page.extra.github_link %}
-            <img class="store-icon" src="{{ get_url(path='img/store-icons/Github.webp') }}" alt="Get it on Github"
-                onClick="window.open('{{ page.extra.github_link }}', '_blank')" role="button" tabIndex="0">
-            {% endif %}
+        <div class="store-icons">
+            <div>
+                {% if page.extra.playstore_link %}
+                <img class="store-icon" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}"
+                    alt="Get it on Google Play" onClick="window.open('{{ page.extra.playstore_link }}', '_blank')"
+                    role="button" tabIndex="0">
+                {% endif %}
+                {% if page.extra.appstore_link %}
+                <img class="store-icon" src="{{ get_url(path='img/store-icons/AppStore.webp') }}"
+                    alt="Download on the App Store" onClick="window.open('{{ page.extra.appstore_link }}', '_blank')"
+                    role="button" tabIndex="0">
+                {% endif %}
+            </div>
+            <div>
+                {% if page.extra.fdroid_link %}
+                <img class="store-icon" src="{{ get_url(path='img/store-icons/FDroid.webp') }}" alt="Get it on F-Droid"
+                    onClick="window.open('{{ page.extra.fdroid_link }}', '_blank')" role="button" tabIndex="0">
+                {% endif %}
+                {% if page.extra.github_link %}
+                <img class="store-icon" src="{{ get_url(path='img/store-icons/Github.webp') }}" alt="Get it on Github"
+                    onClick="window.open('{{ page.extra.github_link }}', '_blank')" role="button" tabIndex="0">
+                {% endif %}
+            </div>
         </div>
     </div>
 </div>
