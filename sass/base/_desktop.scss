@@ -3,20 +3,17 @@ body {
     -webkit-font-smoothing: antialiased;
 
     background-color: $background-color-light;
+    color: $font-color-light;
 
     @media (prefers-color-scheme: dark) {
         background-color: $background-color-dark;
+        color: $font-color-dark;
     }
 
     display: flex;
     flex-direction: column;
     min-height: 97vh;
 
-    color: $font-color-light;
-
-    @media (prefers-color-scheme: dark) {
-        color: $font-color-dark;
-    }
 }
 
 h1 {
@@ -94,6 +91,9 @@ p {
     margin-right: 0.5vw;
     margin-left: 0.5vw;
     cursor: pointer;
+    @media (prefers-color-scheme: dark) {
+        filter: invert(1);
+    }
 }
 
 .footer {
