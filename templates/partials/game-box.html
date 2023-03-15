@@ -9,8 +9,8 @@
                 {{ page.title }}</a>
         </div>
         <div class="game-description">{{ page.description | safe }}</div>
-        <div class="store-icons">
-            <div>
+        <div>
+            <div class="store-icons">
                 {% if page.extra.playstore_link %}
                 <img class="store-icon" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}"
                     alt="Get it on Google Play" onClick="window.open('{{ page.extra.playstore_link }}', '_blank')"
@@ -22,7 +22,8 @@
                     role="button" tabIndex="0">
                 {% endif %}
             </div>
-            <div>
+
+            <div class="store-icons">
                 {% if page.extra.fdroid_link %}
                 <img class="store-icon" src="{{ get_url(path='img/store-icons/FDroid.webp') }}" alt="Get it on F-Droid"
                     onClick="window.open('{{ page.extra.fdroid_link }}', '_blank')" role="button" tabIndex="0">
