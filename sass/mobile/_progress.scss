@@ -8,7 +8,7 @@
         border: 3px solid $link-color-dark;
     }
 
-    height: 7vw;
+    height: 6vw;
 }
 
 .progress .progress_text {
@@ -16,6 +16,7 @@
     overflow: visible;
     text-align: center;
     width: 80vw;
+    line-height: 6vw;
 }
 
 .progress .progress_bar {
