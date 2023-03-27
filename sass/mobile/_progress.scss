@@ -1,0 +1,31 @@
+.progress {
+    margin-top: 3vw;
+    width: 80vw;
+    padding: 2px;
+    border: 3px solid $link-color-light;
+
+    @media (prefers-color-scheme: dark) {
+        border: 3px solid $link-color-dark;
+    }
+
+    height: 7vw;
+}
+
+.progress .progress_text {
+    position: absolute;
+    overflow: visible;
+    text-align: center;
+    width: 80vw;
+}
+
+.progress .progress_bar {
+    height: 100%;
+    width: var(--percentage);
+    background-color: $link-color-light;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $link-color-dark;
+    }
+
+    text-align: justify-center;
+}

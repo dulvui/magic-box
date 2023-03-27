@@ -13,47 +13,49 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 97vh;
+
+    font-size: 1.5vw;
+    font-weight: 300;
 }
 
 h1 {
-    font-size: 8vw;
+    font-size: 3.2vw;
     font-weight: 500;
     margin-bottom: 0;
 }
 
 h2 {
-    font-size: 6vw;
+    font-size: 2vw;
     font-weight: 500;
-    margin-bottom: 0;
 }
 
 p {
-    font-size: 4.5vw;
-    font-weight: 300;
+    max-width: 50vw;
+    margin-top: 1vw;
     line-height: 1.4;
 }
 
+table {
+    width: 25vw;
+}
+
 #navbar {
-    margin: 0vh 4vw 0vh 4vw;
-    padding: 0.5vh 1vw 0.5vh 1vw;
-    padding-bottom: 1vw;
+    margin: 0vh 9.5vw 0vh 9.5vw;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
+    padding-bottom: 0.5vw;
     z-index: 3;
     background-color: $background-color-light;
-
-    @media (prefers-color-scheme: dark) {
-        background-color: $background-color-dark;
-    }
-
-    overflow: hidden;
-    position: fixed;
-    top: 0;
-    width: 85vw;
     border-bottom: $background-color-dark 1px solid;
 
     @media (prefers-color-scheme: dark) {
         background-color: $background-color-dark;
         border-bottom: $background-color-light 1px solid;
     }
+
+    overflow: hidden;
+    position: fixed;
+    top: 0;
+    width: 80vw;
     display: flex;
 }
 
@@ -62,35 +64,37 @@ p {
 }
 
 .nav {
-    font-size: 4.5vw;
+    font-size: 1.5vw;
     font-weight: 300;
 }
 
 .nav-right {
-    margin-left: 2vw;
+    margin-left: 1vw;
 }
 
 .dynamic-url {
-    display: none;
+    display: initial;
 }
 
 #content {
     flex: 1;
     margin-bottom: 2vh;
-    padding: 1vh 6vw 0vh 6vw;
+    padding: 1vh 10vw 0vh 10vw;
 }
+
 
 .simple-icons {
     display: flex;
     justify-content: center;
-    margin-top: 2vh;
+    margin-top: 5vh;
 }
 
 .simple-icon {
-    width: 9vw;
-    height: 9vw;
-    margin-right: 1vw;
-    margin-left: 1vw;
+    width: 3vw;
+    height: 3vw;
+    margin-right: 0.5vw;
+    margin-left: 0.5vw;
+    cursor: pointer;
 
     @media (prefers-color-scheme: dark) {
         filter: invert(1);
@@ -98,14 +102,17 @@ p {
 }
 
 .footer {
-    margin: 2vh 4vw 0vh 4vw;
-    padding: 0.5vh 1vw 0.5vh 1vw;
     font-weight: 300;
-    font-size: 3vw;
+    font-size: 1vw;
+    margin: 2vh 9.5vw 0vh 9.5vw;
+    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
     border-top: $background-color-dark 1px solid;
+
     @media (prefers-color-scheme: dark) {
         border-top: $background-color-light 1px solid;
     }
-    width: 85vw;
+
+    width: 80vw;
+    bottom: 0px;
     text-align: center;
 }

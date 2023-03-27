@@ -13,19 +13,20 @@ $font-color-dark: $background-color-light;
 
 /* mobile */
 @media only screen and (max-width: 932px) {
-    @import 'base/mobile';
-    @import 'index/mobile';
-    @import 'blog/mobile';
-    @import 'game/mobile';
-    @import 'game-box/mobile';
-
+    @import 'mobile/base';
+    @import 'mobile/index';
+    @import 'mobile/blog';
+    @import 'mobile/game-box';
+    @import 'mobile/game';
+    @import 'mobile/progress';
 }
 
 /* desktop */
 @media only screen and (min-width: 932px) {
-    @import 'base/desktop';
-    @import 'index/desktop';
-    @import 'blog/desktop';
-    @import 'game/desktop';
-    @import 'game-box/desktop';
+    @import 'desktop/base';
+    @import 'desktop/index';
+    @import 'desktop/blog';
+    @import 'desktop/game-box';
+    @import 'desktop/game';
+    @import 'desktop/progress';
 }
