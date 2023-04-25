@@ -14,6 +14,14 @@
 {% endif %}
 
 
+<div id="screenshots">
+  {% for asset in page.assets -%}
+  {%- if asset is matching("[.](jpg|png|webp)$") -%}
+  <img class="screenshot" alt="Screenshot of the game" src="{{ get_url(path=asset) }}" />
+  {%- endif %}
+  {%- endfor %}
+</div>
+
 <div>
   {% if page.extra.playstore_link %}
   <img class="store-icon-big" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}" alt="Get it on Google Play"
@@ -40,13 +48,7 @@
   {% endif %}
 </div>
 
-<div id="screenshots">
-  {% for asset in page.assets -%}
-  {%- if asset is matching("[.](jpg|png|webp)$") -%}
-  <img class="screenshot" alt="Screenshot of the game" src="{{ get_url(path=asset) }}" />
-  {%- endif %}
-  {%- endfor %}
-</div>
+
 <br>
 <div>
   <p>You can find the game's privacy policy <a href="privacy-policy">here.</a></p>
