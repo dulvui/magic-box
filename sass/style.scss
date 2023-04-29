@@ -1,4 +1,3 @@
-
 $background-color-light: #FDF6E3;
 $background-color-dark: #002b36;
 
@@ -9,10 +8,12 @@ $font-color-light: $background-color-dark;
 $font-color-dark: $background-color-light;
 
 @import 'font';
-@import 'link';
 
 /* mobile */
 @media only screen and (max-width: 932px) {
+    $link-border-radius: 1.6vw;
+    @import 'link';
+
     @import 'mobile/base';
     @import 'mobile/index';
     @import 'mobile/blog';
@@ -23,6 +24,9 @@ $font-color-dark: $background-color-light;
 
 /* desktop */
 @media only screen and (min-width: 932px) {
+    $link-border-radius: 0.4vw;
+    @import 'link';
+
     @import 'desktop/base';
     @import 'desktop/index';
     @import 'desktop/blog';

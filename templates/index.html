@@ -17,9 +17,9 @@
 {% include 'partials/game-box.html' %}
 {% endfor %}
 
-<!-- <p><a  href="games">More games...</a></p> -->
-
 <h2><a  href="/blog">Blog</a></h2>
+
+<p>I also write a blog about <strong>software</strong> and <strong>game development</strong>.</p>
 
 {% set blog = get_section(path="blog/_index.md") %}
 {% for page in blog.pages | slice(end=2) %}
