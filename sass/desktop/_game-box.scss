@@ -1,9 +1,10 @@
 .game-box {
     display: inline-table;
-    width: 24vw;
+    width: 28vw;
     height: 8vw;
-    margin-top: 1vw;
-    padding-right: 0.5vw;
+    margin-top: 0.5vw;
+    margin-bottom: 1vw;
+    margin-right: 1.5vw;
 }
 
 .game-box-right{
@@ -13,8 +14,8 @@
 
 .game-icon {
     float: left;
-    width: 9vw;
-    height: 9vw;
+    width: 11vw;
+    height: 11vw;
     margin-right: 1.5vw;
     border-radius: 1vw;
     cursor: pointer;
@@ -22,11 +23,11 @@
 
 .game-title {
     font-weight: 500;
-    font-size: 1.5vw;
+    font-size: 1.8vw;
 }
 
 .game-description{
-    font-size: 1vw;
+    font-size: 1.2vw;
     margin-top: 1vw;
     margin-bottom: 1vw;
     font-weight: 300;
@@ -35,7 +36,7 @@
 
 .store-icon {
     cursor: pointer;
-    height: 1.7vw;
+    height: 2.2vw;
     margin-right: 0.5vw;
     margin-bottom: 0.2vw;
 }
