@@ -34,3 +34,7 @@ $font-color-dark: $background-color-light;
     @import 'desktop/game';
     @import 'desktop/progress';
 }
+
+#mastodon-verification {
+    display: none;
+}

@@ -14,9 +14,10 @@
     <img class="simple-icon" src="{{ get_url(path='img/icons/linkedin.svg') | safe }}" alt="linkedin button"
         onclick="window.open( '{{ config.extra.links.linkedin }}', '_blank') " role="button"
         onauxclick="window.open( '{{ config.extra.links.linkedin }}', '_blank')" tabIndex="0">
-    <img class="simple-icon" src="{{ get_url(path='img/icons/mastodon.svg') | safe }}" alt="mastodon button"
+    <img rel="me" class="simple-icon" src="{{ get_url(path='img/icons/mastodon.svg') | safe }}" alt="mastodon button"
         onclick="window.open( '{{ config.extra.links.mastodon }}', '_blank') " role="button"
         onauxclick="window.open( '{{ config.extra.links.mastodon }}', '_blank')" tabIndex="0">
+    <a rel="me" id="mastodon-verification" href="https://mastodon.social/@dulvui"></a>
     <img class="simple-icon" src="{{ get_url(path='img/icons/mail.svg') | safe }}" alt="email button"
         onclick="window.open('mailto:{{config.extra.email}}', '_self')" role="button"
         onauxclick="window.open('mailto:{{config.extra.email}}', '_self')" tabIndex="0">
