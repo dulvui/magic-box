@@ -7,9 +7,13 @@
 
 {{ page.content | safe }}
 
-{% if page.extra.repo %}
+{% if page.extra.repo_github %}
 <p>
-  This game is Open Source on <a href="{{ page.extra.repo | safe}}" target="_blank">Github</a>!
+  This game is Open Source on <a href="{{ page.extra.repo_github | safe}}" target="_blank">Github</a>
+  {% if page.extra.repo_codeberg %}
+  and <a href="{{ page.extra.repo_codeberg | safe}}" target="_blank">Codeberg</a>.
+  {% else %}.
+  {% endif %}
 </p>
 {% endif %}
 
@@ -51,7 +55,7 @@
 
 <br>
 <div>
-  <p>You can find the game's privacy policy <a href="privacy-policy">here.</a></p>
+  <p>You can find the game's privacy policy <a href="{{current_path}}privacy-policy">here.</a></p>
 
 </div>
 {% endblock content %}

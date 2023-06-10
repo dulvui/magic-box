@@ -1,7 +1,6 @@
 +++
 title = "This website"
 template = "privacy-policy.html"
-date = 2022-12-04
 [extra]
 name = "This website"
 sourcecode = "https://github.com/dulvui/dulvui.github.io"

@@ -1,7 +1,7 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h2>{{ page.title | safe }} </h2>
+<h1>{{ page.title | safe }} </h1>
 
 <p>{{ page.extra.name | safe }} <strong>doesn't collect or share any data</strong>.</p>
 <p>No personal data, tracking data or any other type of data is leaving your device at all and so it can't even reach
@@ -15,12 +15,20 @@
         license. It doesn't track you and has no third party libraries included.
 
         {% endif %}
-        {% if page.extra.sourcecode %}
-        You can find the source code on <a a href="{{ page.extra.sourcecode | safe }}" target="_blank">GitHub</a>.
+        {% if page.extra.repo_github %}
+        You can find the source code on <a a href="{{ page.extra.repo_github | safe }}" target="_blank">GitHub</a>
+        {% if page.extra.repo_codeberg %}
+        and <a a href="{{ page.extra.repo_codeberg | safe }}" target="_blank">Codeberg</a>.
+        {% else %}.
         {% endif %}
 </p>
-<p>This policy is effective as of {{ page.updated | safe | date(format="%d. %B %Y") }}. Any changes to this privacy policy can be found on <a a
-                href="{{ config.extra.repository | safe }}" target="_blank">GitHub</a> commit history of
+{% endif %}
+</p>
+<p>This policy is effective as of {{ config.extra.privacy_policy_updated | safe | date(format="%d. %B %Y") }}. Any
+        changes to this privacy
+        policy can be found on <a a href="{{ config.extra.repo_github | safe }}" target="_blank">GitHub</a> and <a a
+                href="{{ config.extra.repo_codeberg | safe }}" target="_blank">Codeberg</a> commits
+        history of
         this website.</p>
 <p>If you have questions send me a mail at <a href="mailto:{{ config.extra.email | safe }}">{{
                 config.extra.email | safe }}</a>.</p>
