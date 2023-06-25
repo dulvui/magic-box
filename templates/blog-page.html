@@ -14,10 +14,13 @@
   If you have questions or feedback feel free to
 
   {% if page.extra.mastodon_link %}
-  comment on <a href="{{ page.extra.mastodon_link | safe }}">Mastodon</a> or
+  comment on <a href="{{ page.extra.mastodon_link | safe }}">Mastodon</a>
+  {% endif %}
+  {% if page.extra.hackernews_link %}
+  and <a href="{{ page.extra.hackernews_link | safe }}">HackerNews</a>
   {% endif %}
 
-  write me an email at <a href="mailto:{{ config.extra.email | safe }}?subject={{ page.title }}">{{
+  or write me an email at <a href="mailto:{{ config.extra.email | safe }}?subject={{ page.title }}">{{
     config.extra.email | safe }}</a>
 </p>
 
