@@ -7,7 +7,7 @@ $link-color-dark: #53f5c480;
 $font-color-light: $background-color-dark;
 $font-color-dark: $background-color-light;
 
-// @import 'font';
+@import 'font';
 
 /* mobile */
 @media only screen and (max-width: 932px) {
