@@ -16,6 +16,9 @@ body {
 
     font-size: 4.5vw;
     font-weight: 300;
+
+    width: 85vw;
+    margin: 2vh auto;
 }
 
 h1 {
@@ -46,8 +49,6 @@ table {
 }
 
 #navbar {
-    margin: 0vh 4vw 0vh 4vw;
-    padding: 0.5vh 1vw 0.5vh 1vw;
     padding-bottom: 1vw;
     z-index: 3;
     background-color: $background-color-light;
@@ -89,7 +90,6 @@ table {
 #content {
     flex: 1;
     margin-bottom: 2vh;
-    padding: 1vh 6vw 0vh 6vw;
 }
 
 .simple-icons {
@@ -110,7 +110,7 @@ table {
 }
 
 .footer {
-    margin: 2vh 4vw 0vh 4vw;
+    margin-top: 2vw;
     padding: 0.5vh 1vw 0.5vh 1vw;
     font-weight: 300;
     font-size: 3vw;
@@ -118,6 +118,5 @@ table {
     @media (prefers-color-scheme: dark) {
         border-top: $background-color-light 1px solid;
     }
-    width: 85vw;
     text-align: center;
 }

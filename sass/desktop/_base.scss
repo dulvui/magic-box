@@ -16,6 +16,9 @@ body {
 
     font-size: 1.5vw;
     font-weight: 300;
+
+    width: 60vw;
+    margin: 2vh auto;
 }
 
 h1 {
@@ -40,8 +43,6 @@ table {
 }
 
 #navbar {
-    margin: 0vh 19.5vw 0vh 19.5vw;
-    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
     padding-bottom: 0.5vw;
     z-index: 3;
     background-color: $background-color-light;
@@ -54,8 +55,8 @@ table {
 
     overflow: hidden;
     position: fixed;
-    top: 0;
     width: 60vw;
+    top: 0;
     display: flex;
 }
 
@@ -79,8 +80,6 @@ table {
 #content {
     flex: 1;
     margin-bottom: 2vh;
-    padding: 1vh 0vw 0vh 20vw;
-    width: 60vw;
 }
 
 
@@ -105,15 +104,13 @@ table {
 .footer {
     font-weight: 300;
     font-size: 1vw;
-    margin: 2vh 19.5vw 0vh 19.5vw;
-    padding: 0.5vh 0.5vw 0.5vh 0.5vw;
     border-top: $background-color-dark 1px solid;
 
     @media (prefers-color-scheme: dark) {
         border-top: $background-color-light 1px solid;
     }
 
-    width: 60vw;
+    margin-top: 1vw;
     bottom: 0px;
     text-align: center;
 }

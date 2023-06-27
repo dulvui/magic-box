@@ -1,8 +1,7 @@
 .progress {
     margin-top: 3vw;
-    width: 80vw;
-    padding: 2px;
-    border: 3px solid $link-color-light;
+    width: 83.5vw;
+    border: 0.75vw solid $link-color-light;
 
     @media (prefers-color-scheme: dark) {
         border: 3px solid $link-color-dark;
@@ -15,7 +14,7 @@
     position: absolute;
     overflow: visible;
     text-align: center;
-    width: 80vw;
+    width: 85vw;
     line-height: 6vw;
 }
 
