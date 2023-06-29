@@ -38,3 +38,10 @@ $font-color-dark: $background-color-light;
 #mastodon-verification {
     display: none;
 }
+
+
+.itchio {
+    @media (prefers-color-scheme: dark) {
+        filter: invert(1);
+    }
+}
