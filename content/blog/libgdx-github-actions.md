@@ -11,13 +11,11 @@ This is my first blog post.
 This is my first blog post.
 
 ```html
-  <button class="store-icon" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') "> ssssssssssssssssssssssssssssssssssssssssssss
-  </button>
-
-  {% endif %}
-  {% if page.extra.playstore_link != '' %}
-
-  <button class="store-icon" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
+<button class="store-icon" onclick="window.open( '{{ page.extra.appstore_link }}', '_blank') ">
+</button>
+{% endif %}
+{% if page.extra.playstore_link != '' %}
+<button class="store-icon" onclick="window.open( '{{ page.extra.playstore_link }}', '_blank') ">
 ```
 
 

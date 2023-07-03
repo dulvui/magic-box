@@ -1,9 +1,14 @@
 +++
-title = "Pocket Broomball"
+title = "Privacy Policy - WhatColor"
 template = "privacy-policy.html"
+aliases = ["privacy-policies/whatcolor","privacy-policies/whatcolor.html"]
 [extra]
-name = "Pocket Broomball"
-sourcecode = "https://github.com/dulvui/pocket-broomball"
+name = "Color"
 license = "AGPL-3.0-or-later"
-licenselink = "https://github.com/dulvui/pocket-broomball/blob/main/LICENSE"
+licenselink = "https://github.com/dulvui/whatcolor/blob/main/LICENSE"
+tool = "libGDX"
+toollink = "https://libgdx.com/"
+
+repo_github = "https://github.com/dulvui/whatcolor"
+repo_codeberg = "https://codeberg.org/dulvui/whatcolor"
 +++
