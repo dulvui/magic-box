@@ -10,18 +10,19 @@
 {{ page.content | safe }}
 
 <!-- Comments -->
+
+<h2>Comments</h2>
 <p>
-  If you have questions or feedback feel free to
+  Feel free to
+  write me an email at <a href="mailto:{{ config.extra.email | safe }}?subject={{ page.title }}">{{
+    config.extra.email | safe }}</a>
 
   {% if page.extra.mastodon_link %}
-  comment on <a href="{{ page.extra.mastodon_link | safe }}">Mastodon</a>
+  and comment on <a href="{{ page.extra.mastodon_link | safe }}">Mastodon</a>
   {% endif %}
   {% if page.extra.hackernews_link %}
-  and <a href="{{ page.extra.hackernews_link | safe }}">HackerNews</a>
+  or <a href="{{ page.extra.hackernews_link | safe }}">HackerNews</a>.
   {% endif %}
-
-  or write me an email at <a href="mailto:{{ config.extra.email | safe }}?subject={{ page.title }}">{{
-    config.extra.email | safe }}</a>
 </p>
 
 {% endblock content %}
