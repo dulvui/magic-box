@@ -8,6 +8,7 @@ $font-color-light: $background-color-dark;
 $font-color-dark: $background-color-light;
 
 @import 'font';
+@import 'fade-in';
 
 /* mobile */
 @media only screen and (max-width: 932px) {
