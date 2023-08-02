@@ -14,20 +14,9 @@ $font-color-dark: $background-color-light;
 @import 'link';
 
 @import 'base';
+@import 'navbar';
 @import 'index';
 @import 'blog';
 @import 'game-box';
 @import 'game';
 @import 'progress';
-
-
-#mastodon-verification {
-    display: none;
-}
-
-
-.itchio {
-    @media (prefers-color-scheme: dark) {
-        filter: invert(1);
-    }
-}
