@@ -64,19 +64,6 @@ p {
     }
 }
 
-.footer {
-    border-top: $background-color-dark 1px solid;
-
-    @media (prefers-color-scheme: dark) {
-        border-top: $background-color-light 1px solid;
-    }
-
-    text-align: center;
-    font-weight: 300;
-    bottom: 0;
-}
-
-
 // Desktop
 @media only screen and (min-width: 932px) {
     body {
@@ -113,12 +100,6 @@ p {
         margin-right: 0.5vw;
         margin-left: 0.5vw;
         cursor: pointer;
-    }
-
-    .footer {
-        font-weight: 300;
-        font-size: 1vw;
-        margin-top: 1vw;
     }
 
 }
@@ -168,11 +149,5 @@ p {
         height: 9vw;
         margin-right: 1vw;
         margin-left: 1vw;
-    }
-
-    .footer {
-        margin-top: 2vw;
-        padding: 0.5vh 1vw 0.5vh 1vw;
-        font-size: 3vw;
     }
 }
