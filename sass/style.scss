@@ -7,17 +7,17 @@ $link-color-dark: #53f5c480;
 $font-color-light: $background-color-dark;
 $font-color-dark: $background-color-light;
 
+// for all
+@import 'base';
 @import 'font';
 @import 'fade-in';
-
-/* mobile */
 @import 'link';
-
-@import 'base';
 @import 'navbar';
 @import 'footer';
+
+// specific sites
 @import 'index';
 @import 'blog';
-@import 'game-box';
 @import 'game';
+@import 'game-box';
 @import 'progress';
