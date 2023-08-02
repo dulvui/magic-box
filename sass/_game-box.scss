@@ -1,0 +1,101 @@
+// Desktop
+@media only screen and (min-width: 932px) {
+    .game-box {
+        display: inline-table;
+        width: 28vw;
+        height: 8vw;
+        margin-top: 0.5vw;
+        margin-bottom: 1vw;
+        margin-right: 1.5vw;
+    }
+
+    .game-box-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-icon {
+        float: left;
+        width: 11vw;
+        height: 11vw;
+        margin-right: 1.5vw;
+        border-radius: 1vw;
+        cursor: pointer;
+    }
+
+    .game-title {
+        font-weight: 500;
+        font-size: 1.8vw;
+    }
+
+    .game-description {
+        font-size: 1.2vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+        font-weight: 300;
+        flex: 1;
+    }
+
+    .store-icon {
+        cursor: pointer;
+        height: 2.2vw;
+        margin-right: 0.5vw;
+        margin-bottom: 0.2vw;
+    }
+
+
+}
+
+// Mobile
+@media only screen and (max-width: 932px) {
+    .game-box {
+        padding-top: 3vw;
+        padding-bottom: 3vw;
+        width: 85vw;
+        height: 28vw;
+        margin-top: 2vw;
+    }
+
+    .game-box-right {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .game-box-right-separator {
+        flex: 1;
+    }
+
+    .game-icon {
+        float: left;
+        margin-right: 4vw;
+        width: 31vw;
+        height: 31vw;
+        border-radius: 4vw;
+    }
+
+
+    .game-title {
+        display: flex;
+        font-weight: 500;
+        font-size: 5vw;
+    }
+
+    .game-description {
+        margin-top: 1.5vw;
+        margin-bottom: 2vw;
+        font-weight: 300;
+        font-size: 4vw;
+        display: flex;
+    }
+
+    .store-icons {
+        display: flex;
+        margin-bottom: 1.5vw;
+    }
+
+    .store-icon {
+        cursor: pointer;
+        height: 7.5vw;
+        margin-right: 2vw;
+    }
+}

@@ -11,30 +11,15 @@ $font-color-dark: $background-color-light;
 @import 'fade-in';
 
 /* mobile */
-@media only screen and (max-width: 932px) {
-    $link-border-radius: 1.6vw;
-    @import 'link';
+@import 'link';
 
-    @import 'mobile/base';
-    @import 'mobile/index';
-    @import 'mobile/blog';
-    @import 'mobile/game-box';
-    @import 'mobile/game';
-    @import 'mobile/progress';
-}
+@import 'base';
+@import 'index';
+@import 'blog';
+@import 'game-box';
+@import 'game';
+@import 'progress';
 
-/* desktop */
-@media only screen and (min-width: 932px) {
-    $link-border-radius: 0.4vw;
-    @import 'link';
-
-    @import 'desktop/base';
-    @import 'desktop/index';
-    @import 'desktop/blog';
-    @import 'desktop/game-box';
-    @import 'desktop/game';
-    @import 'desktop/progress';
-}
 
 #mastodon-verification {
     display: none;

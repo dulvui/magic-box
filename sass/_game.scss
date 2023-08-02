@@ -1,0 +1,41 @@
+// Desktop
+@media only screen and (min-width: 932px) {
+
+    #screenshots {
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        display: flex;
+    }
+
+    .screenshot {
+        margin-right: 1vw;
+        width: 14vw;
+    }
+
+    .store-icon-big {
+        cursor: pointer;
+        margin-right: 1vw;
+        height: 3vw;
+    }
+}
+
+// Mobile
+@media only screen and (max-width: 932px) {
+    #screenshots {
+        margin-top: 3vh;
+        margin-bottom: 3vh;
+        display: flex;
+        overflow: auto;
+    }
+
+    .screenshot {
+        margin-right: 3vw;
+        width: 70vw;
+    }
+
+    .store-icon-big {
+        cursor: pointer;
+        margin-right: 2vw;
+        height: 12vw;
+    }
+}

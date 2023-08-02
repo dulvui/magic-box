@@ -1,0 +1,41 @@
+// Desktop
+@media only screen and (min-width: 932px) {
+
+    pre[class^="language-"],
+    pre[class*=" language-"] {
+        padding: 15px 10px 15px 10px;
+        max-width: 60vw;
+        overflow: auto;
+        font-size: 1.2vw;
+        margin-bottom: 5vh;
+    }
+
+    .blog-image {
+        width: 20vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
+}
+
+// Mobile
+@media only screen and (max-width: 932px) {
+
+    pre[class^="language-"],
+    pre[class*=" language-"] {
+        padding: 15px 10px 15px 10px;
+        max-width: 80vw;
+        overflow: auto;
+        font-size: 4vw;
+        margin-bottom: 4vh;
+    }
+
+    .blog-image {
+        width: 85vw;
+        height: auto;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
+}
