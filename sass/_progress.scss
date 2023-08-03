@@ -1,3 +1,23 @@
+.progress .progress_text {
+    position: absolute;
+    overflow: visible;
+    text-align: center;
+}
+
+
+.progress .progress_bar {
+    height: 100%;
+    width: var(--percentage);
+    background-color: $link-color-light;
+
+    @media (prefers-color-scheme: dark) {
+        background-color: $link-color-dark;
+    }
+
+    text-align: justify-center;
+}
+
+
 // Desktop
 @media only screen and (min-width: 932px) {
     .progress {
@@ -14,23 +34,8 @@
     }
 
     .progress .progress_text {
-        position: absolute;
-        overflow: visible;
-        text-align: center;
         width: 25vw;
         line-height: 2.1vw;
-    }
-
-    .progress .progress_bar {
-        height: 100%;
-        width: var(--percentage);
-        background-color: $link-color-light;
-
-        @media (prefers-color-scheme: dark) {
-            background-color: $link-color-dark;
-        }
-
-        text-align: justify-center;
     }
 }
 
@@ -43,29 +48,14 @@
         border: 0.75vw solid $link-color-light;
 
         @media (prefers-color-scheme: dark) {
-            border: 3px solid $link-color-dark;
+            border: 0.75px solid $link-color-dark;
         }
 
         height: 6vw;
     }
 
     .progress .progress_text {
-        position: absolute;
-        overflow: visible;
-        text-align: center;
         width: 85vw;
         line-height: 6vw;
-    }
-
-    .progress .progress_bar {
-        height: 100%;
-        width: var(--percentage);
-        background-color: $link-color-light;
-
-        @media (prefers-color-scheme: dark) {
-            background-color: $link-color-dark;
-        }
-
-        text-align: justify-center;
     }
 }

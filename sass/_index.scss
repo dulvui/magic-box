@@ -1,21 +1,31 @@
+.top-row {
+    display: flex;
+    align-items: flex-end;
+}
+
+#hello {
+    font-weight: 500;
+}
+
+#introduction {
+    font-weight: 500;
+}
+
+
 // Desktop
 @media only screen and (min-width: 932px) {
     .top-row {
-        display: flex;
-        align-items: flex-end;
         margin-top: 2vw;
     }
 
     #hello {
         font-size: 5vw;
-        font-weight: 500;
         margin-bottom: 10px;
         margin-left: 0px;
     }
 
     #introduction {
         font-size: 2vw;
-        font-weight: 500;
         margin-bottom: 0;
         margin-top: 10px;
     }
@@ -31,15 +41,9 @@
 
 // Mobile
 @media only screen and (max-width: 932px) {
-    .top-row {
-        display: flex;
-        align-items: flex-end;
-    }
-
 
     #hello {
         font-size: 16vw;
-        font-weight: 500;
         margin-bottom: 0;
     }
 

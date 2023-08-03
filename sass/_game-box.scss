@@ -1,3 +1,23 @@
+
+.game-icon {
+    float: left;
+}
+
+.game-box-right {
+    display: flex;
+    flex-direction: column;
+}
+
+.game-title {
+    font-weight: 500;
+}
+
+.game-description {
+    font-weight: 300;
+    display: flex;
+}
+
+
 // Desktop
 @media only screen and (min-width: 932px) {
     .game-box {
@@ -9,13 +29,8 @@
         margin-right: 1.5vw;
     }
 
-    .game-box-right {
-        display: flex;
-        flex-direction: column;
-    }
 
     .game-icon {
-        float: left;
         width: 11vw;
         height: 11vw;
         margin-right: 1.5vw;
@@ -24,7 +39,6 @@
     }
 
     .game-title {
-        font-weight: 500;
         font-size: 1.8vw;
     }
 
@@ -32,8 +46,6 @@
         font-size: 1.2vw;
         margin-top: 1vw;
         margin-bottom: 1vw;
-        font-weight: 300;
-        flex: 1;
     }
 
     .store-icon {
@@ -56,17 +68,7 @@
         margin-top: 2vw;
     }
 
-    .game-box-right {
-        display: flex;
-        flex-direction: column;
-    }
-
-    .game-box-right-separator {
-        flex: 1;
-    }
-
     .game-icon {
-        float: left;
         margin-right: 4vw;
         width: 31vw;
         height: 31vw;
@@ -83,9 +85,7 @@
     .game-description {
         margin-top: 1.5vw;
         margin-bottom: 2vw;
-        font-weight: 300;
         font-size: 4vw;
-        display: flex;
     }
 
     .store-icons {
@@ -94,7 +94,6 @@
     }
 
     .store-icon {
-        cursor: pointer;
         height: 7.5vw;
         margin-right: 2vw;
     }

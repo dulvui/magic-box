@@ -1,11 +1,11 @@
+#screenshots {
+    margin-top: 3vh;
+    margin-bottom: 3vh;
+    display: flex;
+}
+
 // Desktop
 @media only screen and (min-width: 932px) {
-
-    #screenshots {
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-        display: flex;
-    }
 
     .screenshot {
         margin-right: 1vw;
@@ -22,9 +22,6 @@
 // Mobile
 @media only screen and (max-width: 932px) {
     #screenshots {
-        margin-top: 3vh;
-        margin-bottom: 3vh;
-        display: flex;
         overflow: auto;
     }
 
