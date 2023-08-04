@@ -19,7 +19,7 @@
 
 
 // Desktop
-@media only screen and (min-width: 932px) {
+@media only screen and (min-width: 1024px) {
     .progress {
         margin-top: 1vw;
         width: 25vw;
@@ -40,7 +40,7 @@
 }
 
 // Mobile
-@media only screen and (max-width: 932px) {
+@media only screen and (max-width: 1024px) {
 
     .progress {
         margin-top: 3vw;
@@ -55,7 +55,7 @@
     }
 
     .progress .progress_text {
-        width: 85vw;
+        width: $mobile-width;
         line-height: 6vw;
     }
 }

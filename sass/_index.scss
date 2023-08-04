@@ -13,51 +13,49 @@
 
 
 // Desktop
-@media only screen and (min-width: 932px) {
-    .top-row {
-        margin-top: 2vw;
-    }
+@media only screen and (min-width: 1024px) {
 
     #hello {
-        font-size: 5vw;
+        font-size: 8vw;
+        margin-top: 1.5vw;
         margin-bottom: 10px;
         margin-left: 0px;
     }
 
     #introduction {
-        font-size: 2vw;
+        font-size: 3vw;
         margin-bottom: 0;
         margin-top: 10px;
     }
 
 
     .selfie {
-        width: 8vw;
-        height: 8vw;
+        width: 12vw;
+        height: 12vw;
         margin-left: 5vw;
         margin-top: 1.5vw;
     }
 }
 
 // Mobile
-@media only screen and (max-width: 932px) {
+@media only screen and (max-width: 1024px) {
 
     #hello {
-        font-size: 16vw;
+        font-size: 15vw;
         margin-bottom: 0;
     }
 
     #introduction {
-        font-size: 9vw;
+        font-size: 6vw;
         font-weight: 500;
         margin-bottom: 0;
         margin-top: 15px;
     }
 
     .selfie {
-        width: 20vw;
-        height: 20vw;
+        width: 24vw;
+        height: 24vw;
         margin-left: 8vw;
-        margin-top: 10vw;
+        margin-top: 5vw;
     }
 }

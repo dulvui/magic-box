@@ -19,7 +19,7 @@
 
 
 // Desktop
-@media only screen and (min-width: 932px) {
+@media only screen and (min-width: 1024px) {
     .game-box {
         display: inline-table;
         width: 28vw;
@@ -43,7 +43,7 @@
     }
 
     .game-description {
-        font-size: 1.2vw;
+        // font-size: 1.2vw;
         margin-top: 1vw;
         margin-bottom: 1vw;
     }
@@ -59,11 +59,11 @@
 }
 
 // Mobile
-@media only screen and (max-width: 932px) {
+@media only screen and (max-width: 1024px) {
     .game-box {
         padding-top: 3vw;
         padding-bottom: 3vw;
-        width: 85vw;
+        width: $mobile-width;
         height: 28vw;
         margin-top: 2vw;
     }
@@ -85,7 +85,7 @@
     .game-description {
         margin-top: 1.5vw;
         margin-bottom: 2vw;
-        font-size: 4vw;
+        // font-size: 4vw;
     }
 
     .store-icons {

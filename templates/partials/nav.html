@@ -8,10 +8,10 @@
     {% for path in current_path | split(pat="/") %}
     {% if path | wordcount > 0 %}
     {% if loop.index < path_length %} {% set partial_url=current_path | split(pat='/' ) | slice(end=path_count) |
-        join(sep='/' ) %} <span class="dynamic-url">/<a class="nav dynamic-url" href="{{ partial_url }}">{{ path
+        join(sep='/' ) %} <span class="breadcrumb">/<a class="breadcrumb" href="{{ partial_url }}">{{ path
             }}</a></span>
         {% else %}
-        <span class="dynamic-url">/<a class="nav" href="{{ current_path }}">{{ path }}</a></span>
+        <span class="breadcrumb">/<a class="nav" href="{{ current_path }}">{{ path }}</a></span>
         {% endif %}
         {% endif %}
         {% set_global path_count = (path_count + 1)%}
@@ -20,7 +20,7 @@
 
         <span id="nav-separator"></span>
 
-        <a class="nav nav-right" href="/games">games</a>
-        <a class="nav nav-right" href="/blog">blog</a>
-        <a class="nav nav-right" href="/donate">donate</a>
+        <a class="nav-right" href="/games">games</a>
+        <a class="nav-right" href="/blog">blog</a>
+        <a class="nav-right" href="/donate">donate</a>
 </nav>

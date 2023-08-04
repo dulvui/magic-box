@@ -6,26 +6,8 @@
     }
 
     text-align: center;
-    font-weight: 300;
     bottom: 0;
-}
 
-
-// Desktop
-@media only screen and (min-width: 932px) {
-    .footer {
-        font-weight: 300;
-        font-size: 1vw;
-        margin-top: 1vw;
-    }
-
-}
-
-// Mobile
-@media only screen and (max-width: 932px) {
-    .footer {
-        margin-top: 2vw;
-        padding: 0.5vh 1vw 0.5vh 1vw;
-        font-size: 3vw;
-    }
+    margin-top: 1rem;
+    padding: 0.51rem 1rem 0.5rem 1rem;
 }

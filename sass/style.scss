@@ -7,6 +7,14 @@ $link-color-dark: #53f5c480;
 $font-color-light: $background-color-dark;
 $font-color-dark: $background-color-light;
 
+$desktop-width: 42vw;
+$mobile-width: 85vw;
+
+$desktop-font-size: 1.2vw;
+$mobile-font-size: 3vw;
+
+
+
 // for all
 @import 'base';
 @import 'font';
