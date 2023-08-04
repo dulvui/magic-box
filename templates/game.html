@@ -17,15 +17,6 @@
 </p>
 {% endif %}
 
-
-<div id="screenshots">
-  {% for asset in page.assets -%}
-  {%- if asset is matching("[.](jpg|png|webp)$") -%}
-  <img class="screenshot" alt="Screenshot of the game" src="{{ get_url(path=asset) }}" />
-  {%- endif %}
-  {%- endfor %}
-</div>
-
 <div>
   {% if page.extra.playstore_link %}
   <img class="store-icon-big" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}" alt="Get it on Google Play"
@@ -46,12 +37,18 @@
     onClick="window.open('{{ page.extra.github_link }}', '_blank')" role="button" tabIndex="0">
   {% endif %}
   {% if page.extra.itchio_link %}
-  <p>Play it directly in your browser on itch.io</p>
   <img class="store-icon-big" src="{{ get_url(path='img/store-icons/itchio.webp') }}" alt="Available on itch.io"
     onClick="window.open('{{ page.extra.itchio_link }}', '_blank')" role="button" tabIndex="0">
   {% endif %}
 </div>
 
+<div id="screenshots">
+  {% for asset in page.assets -%}
+  {%- if asset is matching("[.](jpg|png|webp)$") -%}
+  <img class="screenshot" alt="Screenshot of the game" src="{{ get_url(path=asset) }}" />
+  {%- endif %}
+  {%- endfor %}
+</div>
 
 <br>
 <div>
