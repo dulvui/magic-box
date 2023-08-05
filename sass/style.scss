@@ -7,13 +7,11 @@ $link-color-dark: #53f5c480;
 $font-color-light: $background-color-dark;
 $font-color-dark: $background-color-light;
 
+$desktop-width: 42vw;
+$mobile-width: 85vw;
 
-$desktop-width: 42.5vw;
-$desktop-font-size: $desktop-width / 35;
-$scale: 35em;
-
-$mobile-width: $desktop-width * 2;
-$mobile-font-size: $desktop-font-size * 2;
+$desktop-font-size: 1.2vw;
+$mobile-font-size: 4.5vw;
 
 
 
@@ -31,4 +29,3 @@ $mobile-font-size: $desktop-font-size * 2;
 @import 'game';
 @import 'game-box';
 @import 'progress';
-

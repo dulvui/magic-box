@@ -10,14 +10,14 @@
 {{ section.content | safe }}
 
 
-<h1><a href="/games">Games</a></h1>
+<h2><a href="/games">Games</a></h2>
 
 {% set games = get_section(path="games/_index.md") %}
 {% for page in games.pages | filter(attribute="extra.released", value=true) | slice(end=2) %}
 {% include 'partials/game-box.html' %}
 {% endfor %}
 
-<h1><a href="/blog">Blog</a></h1>
+<h2><a href="/blog">Blog</a></h2>
 
 <p>I also write a blog about <strong>software</strong> and <strong>game development</strong>.</p>
 

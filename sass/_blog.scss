@@ -1,11 +1,39 @@
-pre[class^="language-"],
-pre[class*=" language-"] {
-    padding: 15px 10px 15px 10px;
-    overflow: auto;
-    margin-bottom: 5vh;
+// Desktop
+@media only screen and (min-width: 1024px) {
+
+    pre[class^="language-"],
+    pre[class*=" language-"] {
+        padding: 15px 10px 15px 10px;
+        max-width: $desktop-width;
+        overflow: auto;
+        margin-bottom: 5vh;
+    }
+
+    .blog-image {
+        width: 20vw;
+        height: auto;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
+    }
+
 }
 
-.blog-image {
-    margin-top: 1em;
-    margin-bottom: 1em;
+// Mobile
+@media only screen and (max-width: 1024px) {
+
+    pre[class^="language-"],
+    pre[class*=" language-"] {
+        padding: 15px 10px 15px 10px;
+        max-width: 80vw;
+        overflow: auto;
+        margin-bottom: 4vh;
+    }
+
+    .blog-image {
+        width: $mobile-width;
+        height: auto;
+        margin-top: 5vw;
+        margin-bottom: 5vw;
+    }
+
 }
