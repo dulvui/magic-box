@@ -5,31 +5,14 @@
     overflow: auto;
 }
 
-// Desktop
-@media only screen and (min-width: 1024px) {
 
-    .screenshot {
-        margin-right: 1vw;
-        width: 14vw;
-    }
-
-    .store-icon-big {
-        cursor: pointer;
-        margin-right: 0.7vw;
-        height: 2.4vw;
-    }
+.screenshot {
+    margin-right: 1em;
+    width: 14em;
 }
 
-// Mobile
-@media only screen and (max-width: 1024px) {
-    .screenshot {
-        margin-right: 3vw;
-        width: 70vw;
-    }
-
-    .store-icon-big {
-        cursor: pointer;
-        margin-right: 2vw;
-        height: 12vw;
-    }
+.store-icon-big {
+    cursor: pointer;
+    margin-right: 0.7em;
+    height: 1.95em;
 }

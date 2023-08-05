@@ -1,16 +1,18 @@
+$size: 13.5em;
+
 .game-box {
     display: flex;
     width: 100%;
-    height: 12em;
-    margin-top: 1em;
+    height: $size;
+    margin-top: 2em;
     margin-bottom: 2em;
     margin-right: 2em;
 }
 
 .game-icon {
     float: left;
-    width: 12em;
-    height: 12em;
+    width: $size;
+    height: $size;
     margin-right: 1.5em;
     border-radius: 1.5em;
     cursor: pointer;
@@ -23,7 +25,7 @@
 
 
 .game-title {
-    font-size: 1.2em;
+    font-size: 2em;
     font-weight: 500;
 }
 
@@ -31,8 +33,8 @@
     font-weight: 300;
     display: flex;
     align-self: flex-start;
-    margin-top: .5em;
-    margin-bottom: 2.5em;
+    margin-top: 1em;
+    margin-bottom: 1em;
 }
 
 .store-icons {
@@ -42,7 +44,7 @@
 
 .store-icon {
     cursor: pointer;
-    height: 2.5em;
+    height: $size / 4.5;
     margin-right: 0.5vw;
-    margin-bottom: 0.2vw;
+    margin-bottom: 0.5em;
 }

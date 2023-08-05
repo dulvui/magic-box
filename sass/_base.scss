@@ -32,8 +32,9 @@ h2 {
 
 
 p {
-    margin-top: 1vw;
+    line-height: 1.4;
 }
+
 
 
 #content {
@@ -45,12 +46,19 @@ p {
 .simple-icons {
     display: flex;
     justify-content: center;
+    margin-top: 1.5em;
 }
 
 .simple-icon {
     @media (prefers-color-scheme: dark) {
         filter: invert(1);
     }
+
+    width: 3em;
+    height: 3em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    cursor: pointer;
 }
 
 
@@ -71,23 +79,6 @@ p {
         width: $desktop-width;
         font-size: $desktop-font-size;
     }
-
-    p {
-        line-height: 1.4;
-    }
-
-    .simple-icons {
-        margin-top: 5vh;
-    }
-
-    .simple-icon {
-        width: 3vw;
-        height: 3vw;
-        margin-right: 0.5vw;
-        margin-left: 0.5vw;
-        cursor: pointer;
-    }
-
 }
 
 // Mobile
@@ -95,16 +86,5 @@ p {
     body {
         width: $mobile-width;
         font-size: $mobile-font-size;
-    }
-
-    .simple-icons {
-        margin-top: 2vh;
-    }
-
-    .simple-icon {
-        width: 9vw;
-        height: 9vw;
-        margin-right: 1vw;
-        margin-left: 1vw;
     }
 }
