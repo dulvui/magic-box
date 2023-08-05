@@ -2,6 +2,8 @@
     display: flex;
 
     z-index: 3;
+
+    width: $scale;
     
     overflow: hidden;
     position: fixed;
@@ -27,30 +29,4 @@
 
 .nav-right {
     margin-left: 0.5rem;
-}
-
-
-// Desktop
-@media only screen and (min-width: 1024px) {
-
-    #navbar {
-        width: $desktop-width;
-    }
-
-    .breadcrumb {
-        display: initial;
-    }
-
-}
-
-// Mobile
-@media only screen and (max-width: 1024px) {
-
-    #navbar {
-        width: $mobile-width;
-    }
-
-    .breadcrumb {
-        display: none;
-    }
 }
