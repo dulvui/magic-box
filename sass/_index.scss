@@ -1,6 +1,6 @@
 .top-row {
     display: flex;
-    align-items: flex-end;
+    align-items: center;
 }
 
 #hello {
@@ -15,47 +15,51 @@
 // Desktop
 @media only screen and (min-width: 1024px) {
 
+    .top-row {
+        margin-top: 2vw;
+    }
+
     #hello {
-        font-size: 8vw;
+        font-size: 4em;
         margin-top: 1.5vw;
         margin-bottom: 10px;
         margin-left: 0px;
     }
 
     #introduction {
-        font-size: 3vw;
-        margin-bottom: 0;
+        font-size: 2em;
         margin-top: 10px;
     }
 
 
     .selfie {
-        width: 12vw;
-        height: 12vw;
+        width: 8vw;
+        height: 8vw;
         margin-left: 5vw;
-        margin-top: 1.5vw;
+        // margin-top: 1.5vw;
     }
 }
 
 // Mobile
 @media only screen and (max-width: 1024px) {
 
+    .top-row {
+        margin-top: 6vw;
+    }
+
     #hello {
-        font-size: 15vw;
-        margin-bottom: 0;
+        font-size: 3em;
     }
 
     #introduction {
-        font-size: 6vw;
+        font-size: 1.5em;
         font-weight: 500;
-        margin-bottom: 0;
         margin-top: 15px;
     }
 
     .selfie {
-        width: 24vw;
-        height: 24vw;
-        margin-left: 8vw;
-        margin-top: 5vw;
+        width: 20vw;
+        height: 20vw;
+        margin-left: 14vw;
     }
 }
