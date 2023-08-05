@@ -1,3 +1,6 @@
+.game-box {
+    display: flex;
+}
 
 .game-icon {
     float: left;
@@ -6,6 +9,7 @@
 .game-box-right {
     display: flex;
     flex-direction: column;
+    justify-content: space-between;
 }
 
 .game-title {
@@ -15,17 +19,22 @@
 .game-description {
     font-weight: 300;
     display: flex;
+    align-self: flex-start;
+}
+
+.store-icons {
+    display: flex;
+    flex-wrap: wrap;
 }
 
 
 // Desktop
 @media only screen and (min-width: 1024px) {
     .game-box {
-        display: inline-table;
-        width: 28vw;
-        height: 8vw;
+        width: $desktop-width / 1.5;
+        height: 11vw;
         margin-top: 0.5vw;
-        margin-bottom: 1vw;
+        margin-bottom: 1.5vw;
         margin-right: 1.5vw;
     }
 
@@ -47,6 +56,8 @@
         margin-top: 1vw;
         margin-bottom: 1vw;
     }
+
+
 
     .store-icon {
         cursor: pointer;
@@ -88,13 +99,9 @@
         font-size: 4vw;
     }
 
-    .store-icons {
-        display: flex;
-        margin-bottom: 1.5vw;
-    }
-
     .store-icon {
-        height: 7.5vw;
+        height: 7vw;
         margin-right: 2vw;
+        margin-bottom: 1.5vw;
     }
 }

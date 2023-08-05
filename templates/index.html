@@ -13,17 +13,17 @@
 <h2><a href="/games">Games</a></h2>
 
 {% set games = get_section(path="games/_index.md") %}
-{% for page in games.pages | filter(attribute="extra.released", value=true) |  slice(end=2) %}
+{% for page in games.pages | filter(attribute="extra.released", value=true) | slice(end=2) %}
 {% include 'partials/game-box.html' %}
 {% endfor %}
 
-<h2><a  href="/blog">Blog</a></h2>
+<h2><a href="/blog">Blog</a></h2>
 
 <p>I also write a blog about <strong>software</strong> and <strong>game development</strong>.</p>
 
 {% set blog = get_section(path="blog/_index.md") %}
 {% for page in blog.pages | slice(end=2) %}
-<p><a  href="{{ page.permalink | safe }}">{{ page.title }}</a></p>
+<p><a href="{{ page.permalink | safe }}">{{ page.title }}</a></p>
 {% endfor %}
 
 {% endblock content %}
