@@ -9,7 +9,6 @@
 .game-box-right {
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 .game-title {
@@ -52,11 +51,9 @@
     }
 
     .game-description {
-        // font-size: 1.2vw;
         margin-top: 1vw;
         margin-bottom: 1vw;
     }
-
 
 
     .store-icon {
