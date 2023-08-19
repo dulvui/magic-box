@@ -19,8 +19,8 @@
         onauxclick="window.open( '{{ config.extra.links.mastodon }}', '_blank')" tabIndex="0">
     <!-- <a rel="me" id="mastodon-verification" href="https://mastodon.social/@dulvui"></a> -->
     <img class="simple-icon" src="{{ get_url(path='img/icons/rss.svg') | safe }}" alt="rss button"
-        onclick="window.open('{{ get_url(path="rss.xml", trailing_slash=false) }}', '_self')" role="button"
-        onauxclick="window.open('{{ get_url(path="rss.xml", trailing_slash=false) }}', '_self')" tabIndex="0">
+        onclick="window.open('{{ get_url(path="rss.xml", trailing_slash=false) }}', '_blank')" role="button"
+        onauxclick="window.open('{{ get_url(path="rss.xml", trailing_slash=false) }}', '_blank')" tabIndex="0">
     <img class="simple-icon" src="{{ get_url(path='img/icons/mail.svg') | safe }}" alt="email button"
         onclick="window.open('mailto:{{config.extra.email}}', '_self')" role="button"
         onauxclick="window.open('mailto:{{config.extra.email}}', '_self')" tabIndex="0">
