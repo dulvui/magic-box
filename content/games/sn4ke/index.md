@@ -2,7 +2,6 @@
 title = 'Sn4ke'
 description = "60 pixel levels"
 date = 2020-09-29
-aliases = ["sn4ke","sn4ke.html","snake", "sn"]
 [extra]
 released = true
 icon = 'img/game-icons/sn4ke.webp'

@@ -2,7 +2,6 @@
 title = 'Ball2Box'
 description = "Swipe to hit the box"
 date = 2022-09-29
-aliases = ["ball2box","ball2box.html","b2b"]
 [extra]
 released = true
 icon = 'img/game-icons/ball2box.webp'

@@ -1,7 +1,6 @@
 +++
 title = "Privacy Policy - Color Shooter"
 template = "privacy-policy.html"
-aliases = ["privacy-policies/colorshooter","privacy-policies/colorshooter.html"]
 [extra]
 name = "Color Shooter"
 license = "AGPL-3.0-or-later"

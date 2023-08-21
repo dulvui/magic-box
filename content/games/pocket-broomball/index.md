@@ -2,7 +2,6 @@
 title = 'Pocket Broomball'
 description = "#1 Broomball game"
 date = 2021-09-29
-aliases = ["pocketbroomball","pocketbroomball.html","pb"]
 [extra]
 released = true
 icon = 'img/game-icons/pocketbroomball.webp'

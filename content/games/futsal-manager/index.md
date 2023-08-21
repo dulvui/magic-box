@@ -2,7 +2,6 @@
 title = 'Futsal Manager'
 description = "The worlds first Futsal Manager game."
 date = 2023-02-15
-aliases = ["fsm"]
 [extra]
 released = false
 icon = 'img/game-icons/futsal-manager.webp'

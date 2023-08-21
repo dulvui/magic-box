@@ -1,7 +1,6 @@
 +++
 title = "Privacy Policy - WhatColor"
 template = "privacy-policy.html"
-aliases = ["privacy-policies/whatcolor","privacy-policies/whatcolor.html"]
 [extra]
 name = "Color"
 license = "AGPL-3.0-or-later"

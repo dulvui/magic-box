@@ -2,7 +2,6 @@
 title = 'WhatColor'
 description = "Remember the colors"
 date = 2019-10-29
-aliases = ["whatcolor","whatcolor.html","wc"]
 [extra]
 released = true
 icon = 'img/game-icons/whatcolor.webp'

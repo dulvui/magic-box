@@ -2,7 +2,6 @@
 title = 'Color Shooter'
 description = 'Shoot the colors'
 date = 2019-09-29
-aliases = ["color-shooter","color-shooter.html","cs"]
 [extra]
 released = true
 icon = 'img/game-icons/colorshooter.webp'
