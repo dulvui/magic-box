@@ -14,15 +14,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   {% block seo %}
+
+  {% if page.title %}
+  <meta property="og:title" content="{{ page.title }}">
+  {% elif section.title and section.title != config.title %}
+  <meta property="og:title" content="{{ section.title }}">
+  {% else %}
+  <meta property="og:title" content="{{ config.title }}">
+  {%- endif %}
+
   {% if page.description %}
   <meta name="description" content="{{ page.description }}">
+  <meta property="og:description" content="{{ page.description }}">
   {% elif page.title %}
   <meta name="description" content="{{ page.title }}">
+  <meta property="og:description" content="{{ page.title }}">
   {% elif section.description %}
   <meta name="description" content="{{ section.description }}">
+  <meta property="og:description" content="{{ section.description }}">
   {% elif section.title %}
   <meta name="description" content="{{ section.title }}">
+  <meta property="og:description" content="{{ section.title }}">
   {% endif %}
+
+  {% if page.preview_image %}
+  <meta property="og:image" content="{{ page.preview_image }}">
+  {% elif section.preview_image %}
+  <meta property="og:image" content="{{ section.preview_image }}">
+  {% else %}
+  <meta property="og:image" content="{{ get_url(path='me.webp', trailing_slash=false) | safe }}">
+  {%- endif %}
+
   {% endblock seo %}
 
   <link rel="stylesheet" type="text/css" href="/dark-code.css" media="(prefers-color-scheme: dark)" />
@@ -31,6 +53,6 @@
   <link rel="icon" type="image/x-icon" href="{{ get_url(path='favicon.ico', trailing_slash=false) | safe }}">
 
   {% block rss %}
-  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path="rss.xml", trailing_slash=false) }}">
-  {% endblock %}
+  <link rel="alternate" type="application/rss+xml" title="RSS" href="{{ get_url(path=`rss.xml`, trailing_slash=false) }}">
+  {% endblock rss %}
 </head>
