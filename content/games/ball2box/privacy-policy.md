@@ -1,7 +1,6 @@
 +++
 title = "Privacy Policy - Ball2Box"
 template = "privacy-policy.html"
-aliases = ["privacy-policies/ball2box","privacy-policies/ball2box.html"]
 [extra]
 name = "Ball2Box"
 license = "AGPL-3.0-or-later"

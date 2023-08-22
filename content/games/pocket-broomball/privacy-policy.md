@@ -1,7 +1,6 @@
 +++
 title = "Privacy Policy - Pocket Broomball"
 template = "privacy-policy.html"
-aliases = ["privacy-policies/pocketbroomball","privacy-policies/pocketbroomball.html"]
 [extra]
 name = "Pocket Broomball"
 license = "AGPL-3.0-or-later"

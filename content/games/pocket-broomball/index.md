@@ -28,7 +28,7 @@ The coolest winter sport has finally come to your phone!
 - International Women League
 - International League
 
-If you want to add <b>your team</b> to the game, send me a mail at <a href="mailto:info@simondalvai.com?subject=Pocket Broomball: new team">info@simondalvai.com</a>  
+If you want to add <b>your team</b> to the game, send me a mail at <a href="mailto:info@simondalvai.org?subject=Pocket Broomball: new team">info@simondalvai.org</a>  
 
 🧹 100+ real-world teams  
 🌈 20+ different styled balls to collect  

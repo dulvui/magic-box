@@ -1,5 +1,5 @@
 # The URL the site will be built for
-base_url = "http://simondalvai.com/magic-box/"
+base_url = "http://simondalvai.org/magic-box/"
 title = "Gianfranco Zola"
 
 # For overriding the default output directory `public`, set it to another value (e.g.: "docs")
@@ -42,7 +42,7 @@ links.liberapay = "https://liberapay.com/dulvui"
 links.paypal = "paypal.me/simondalvai"
 links.hetzner = "https://hetzner.cloud/?ref=bavTO3Qc2Kar"
 
-email = "info@simondalvai.com"
+email = "info@simondalvai.org"
 
 # privacy policy
 privacy_policy_updated = "2023-06-10"
