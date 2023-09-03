@@ -5,6 +5,11 @@
     overflow: auto;
 }
 
+
+.game-page-icon {
+    float: right;
+}
+
 // Desktop
 @media only screen and (min-width: 1024px) {
 
@@ -18,7 +23,15 @@
         margin-right: 0.7vw;
         height: 2.4vw;
     }
+
+    .game-page-icon {
+        width: 10vw;
+        height: 10vw;
+        margin-left: 1.5vw;
+        border-radius: 1vw;
+    }
 }
+
 
 // Mobile
 @media only screen and (max-width: 1024px) {
@@ -31,5 +44,12 @@
         cursor: pointer;
         margin-right: 2vw;
         height: 12vw;
+    }
+
+    .game-page-icon {
+        width: 31vw;
+        height: 31vw;
+        border-radius: 4vw;
+        margin-left: 4vw;
     }
 }

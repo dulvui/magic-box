@@ -5,6 +5,8 @@
   {{ page.title }}
 </h1>
 
+<img class="game-page-icon" src="{{ get_url(path=page.extra.icon) }}" alt="{{ page.title }} icon">
+
 {{ page.content | safe }}
 
 {% if page.extra.repo_github %}
