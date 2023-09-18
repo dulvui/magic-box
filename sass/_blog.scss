@@ -9,6 +9,8 @@ pre[class*=" language-"] {
     height: auto;
 }
 
+
+
 // Desktop
 @media only screen and (min-width: 1024px) {
 
@@ -20,8 +22,12 @@ pre[class*=" language-"] {
 
     .blog-image {
         width: 20vw;
-        margin-top: 1vw;
-        margin-bottom: 1vw;
+        margin-top: 0.5vw;
+        margin-bottom: 0.5vw;
+    }
+
+    .blog-image-wide {
+        width: $desktop-width;
     }
 
 }
@@ -36,10 +42,14 @@ pre[class*=" language-"] {
         margin-bottom: 4vh;
     }
 
+    .blog-image-wide {
+        width: $mobile-width;
+    }
+
     .blog-image {
         width: $mobile-width;
-        margin-top: 5vw;
-        margin-bottom: 5vw;
+        margin-top: 1vw;
+        margin-bottom: 1vw;
     }
 
 }
