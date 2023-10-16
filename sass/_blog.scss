@@ -14,12 +14,6 @@ pre[class*=" language-"] {
 // Desktop
 @media only screen and (min-width: 1024px) {
 
-    pre[class^="language-"],
-    pre[class*=" language-"] {
-        max-width: $desktop-width;
-        margin-bottom: 5vh;
-    }
-
     .blog-image {
         width: 20vw;
         margin-top: 0.5vw;
@@ -39,7 +33,6 @@ pre[class*=" language-"] {
     pre[class*=" language-"] {
         padding: 15px 10px 15px 10px;
         max-width: 80vw;
-        margin-bottom: 4vh;
     }
 
     .blog-image-wide {
