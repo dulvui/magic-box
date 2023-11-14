@@ -3,7 +3,7 @@ title = 'Color Shooter'
 description = 'Shoot the colors'
 date = 2019-09-29
 [extra]
-released = true
+state = 'released'
 icon = 'img/game-icons/colorshooter.webp'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.centrum'
 type = 'libGDX'

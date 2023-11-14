@@ -2,7 +2,7 @@
 title = "Privacy Policy - Futsal Manager"
 template = "privacy-policy.html"
 [extra]
-released = false
+state = 'coming_soon'
 name = "Futsal Manager"
 license = "AGPL-3.0-or-later"
 licenselink = "https://github.com/dulvui/futsal-manager/blob/main/LICENSE"

@@ -3,7 +3,7 @@ title = 'Sn4ke'
 description = "60 pixel levels"
 date = 2020-09-29
 [extra]
-released = true
+state = 'released'
 icon = 'img/game-icons/sn4ke.webp'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.snake'
 appstore_link = 'https://apps.apple.com/app/sn4ke/id1626543157'

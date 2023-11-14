@@ -3,7 +3,7 @@ title = 'Futsal Manager'
 description = "The worlds first Futsal Manager game."
 date = 2023-02-15
 [extra]
-released = false
+state = 'coming_soon'
 icon = 'img/game-icons/futsal-manager.webp'
 playstore_link = ''
 appstore_link = ''

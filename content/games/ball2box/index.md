@@ -3,7 +3,7 @@ title = 'Ball2Box'
 description = "Swipe to hit the box"
 date = 2022-09-29
 [extra]
-released = true
+state = 'released'
 icon = 'img/game-icons/ball2box.webp'
 fdroid_link = 'https://f-droid.org/en/packages/com.simondalvai.ball2box/'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.ultimatetoss'

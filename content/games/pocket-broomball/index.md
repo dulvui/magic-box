@@ -3,7 +3,7 @@ title = 'Pocket Broomball'
 description = "#1 Broomball game"
 date = 2021-09-29
 [extra]
-released = true
+state = 'released'
 icon = 'img/game-icons/pocketbroomball.webp'
 fdroid_link = 'https://f-droid.org/en/packages/com.simondalvai.pocketbroomball/'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.broomball'

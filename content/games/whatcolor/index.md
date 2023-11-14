@@ -3,7 +3,7 @@ title = 'WhatColor'
 description = "Remember the colors"
 date = 2019-10-29
 [extra]
-released = true
+state = 'released'
 icon = 'img/game-icons/whatcolor.webp'
 playstore_link = 'https://play.google.com/store/apps/details?id=com.salvai.whatcolor'
 type = 'libGDX'
