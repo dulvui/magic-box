@@ -13,3 +13,45 @@
 
     font-size: 0.7em;
 }
+
+.simple-icons {
+    display: flex;
+    justify-content: center;
+}
+
+.simple-icon {
+    @media (prefers-color-scheme: dark) {
+        filter: invert(1);
+    }
+}
+
+// Desktop
+@media only screen and (min-width: 1024px) {
+    .simple-icons {
+        margin-top: 4vh;
+    }
+
+    .simple-icon {
+        width: 3.1vw;
+        height: 3.1vw;
+        margin-right: 0.5vw;
+        margin-left: 0.5vw;
+        cursor: pointer;
+    }
+
+}
+
+// Mobile
+@media only screen and (max-width: 1024px) {
+
+    .simple-icons {
+        margin-top: 2vh;
+    }
+
+    .simple-icon {
+        width: 12.2vw;
+        height: 12.2vw;
+        margin-right: 1.5vw;
+        margin-left: 1.5vw;
+    }
+}
