@@ -9,16 +9,6 @@
 
 {{ page.content | safe }}
 
-{% if page.extra.repo_github %}
-<p>
-  This game is Open Source on <a href="{{ page.extra.repo_github | safe}}" target="_blank">Github</a>
-  {% if page.extra.repo_codeberg %}
-  and <a href="{{ page.extra.repo_codeberg | safe}}" target="_blank">Codeberg</a>.
-  {% else %}.
-  {% endif %}
-</p>
-{% endif %}
-
 <div>
   {% if page.extra.playstore_link %}
   <img class="store-icon-big" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}" alt="Get it on Google Play"
@@ -33,6 +23,10 @@
   {% if page.extra.fdroid_link %}
   <img class="store-icon-big" src="{{ get_url(path='img/store-icons/FDroid.webp') }}" alt="Get it on F-Droid"
     onClick="window.open('{{ page.extra.fdroid_link }}', '_blank')" role="button" tabIndex="0">
+  {% endif %}
+  {% if page.extra.flathub_link %}
+  <img class="store-icon-big" src="{{ get_url(path='img/store-icons/flathub.webp') }}" alt="Get it on Flathub"
+    onClick="window.open('{{ page.extra.flathub_link }}', '_blank')" role="button" tabIndex="0">
   {% endif %}
   {% if page.extra.github_link %}
   <img class="store-icon-big" src="{{ get_url(path='img/store-icons/Github.webp') }}" alt="Get it on Github"
@@ -52,9 +46,22 @@
   {%- endfor %}
 </div>
 
-<br>
+{% if page.extra.repo_github %}
+<h2>Source code</h2>
+<p>
+  This is a Free and Open Source game with the source code available on <a href="{{ page.extra.repo_github | safe}}"
+    target="_blank">Github</a>
+  {% if page.extra.repo_codeberg %}
+  and <a href="{{ page.extra.repo_codeberg | safe}}" target="_blank">Codeberg</a>.
+  {% else %}.
+  {% endif %}
+</p>
+{% endif %}
+
+<h2>Privacy</h2>
 <div>
-  <p>You can find the game's privacy policy <a href="{{current_path}}privacy-policy">here.</a></p>
+  <p>This game respects you privacy and doesn't use any form of user tracking. Find the full game's privacy policy <a
+      href="{{current_path}}privacy-policy">here.</a></p>
 
 </div>
 {% endblock content %}
