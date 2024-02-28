@@ -11,30 +11,41 @@
 
 <div>
   {% if page.extra.playstore_link %}
-  <img class="store-icon-big" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}" alt="Get it on Google Play"
-    onClick="window.open('{{ page.extra.playstore_link }}', '_blank')" role="button" tabIndex="0">
+  <a class="no-underline" href="{{  page.extra.playstore_link}}" target="_blank">
+    <img class="store-icon-big" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}"
+      alt="Get {{ page.title }} on Google Play" title="Get {{ page.title }} on Google Play">
+  </a>
   {% endif %}
   {% if page.extra.appstore_link %}
-  <img class="store-icon-big" src="{{ get_url(path='img/store-icons/AppStore.webp') }}" alt="Download on the App Store"
-    onClick="window.open('{{ page.extra.appstore_link }}', '_blank')" role="button" tabIndex="0">
+  <a class="no-underline" href="{{  page.extra.appstore_link}}" target="_blank">
+    <img class="store-icon-big" src="{{ get_url(path='img/store-icons/AppStore.webp') }}"
+      alt="Download {{ page.title }} on the App Store" title="Download {{ page.title }} on the App Store">
+  </a>
   {% endif %}
-  <!-- </div>
-<div> -->
+
   {% if page.extra.fdroid_link %}
-  <img class="store-icon-big" src="{{ get_url(path='img/store-icons/FDroid.webp') }}" alt="Get it on F-Droid"
-    onClick="window.open('{{ page.extra.fdroid_link }}', '_blank')" role="button" tabIndex="0">
+  <a class="no-underline" href="{{ page.extra.fdroid_link }}" target="_blank">
+    <img class="store-icon-big" src="{{ get_url(path='img/store-icons/FDroid.webp') }}"
+      alt="Get {{ page.title }} on F-Droid" title="Get {{ page.title }} on F-Droid">
+  </a>
   {% endif %}
   {% if page.extra.flathub_link %}
-  <img class="store-icon-big" src="{{ get_url(path='img/store-icons/flathub.webp') }}" alt="Get it on Flathub"
-    onClick="window.open('{{ page.extra.flathub_link }}', '_blank')" role="button" tabIndex="0">
+  <a class="no-underline" href="{{ page.extra.flathub_link }}" target="_blank">
+    <img class="store-icon-big" src="{{ get_url(path='img/store-icons/flathub.webp') }}"
+      alt="Get {{ page.title }} on Flathub" title="Get {{ page.title }} on Flathub">
+  </a>
   {% endif %}
   {% if page.extra.github_link %}
-  <img class="store-icon-big" src="{{ get_url(path='img/store-icons/Github.webp') }}" alt="Get it on Github"
-    onClick="window.open('{{ page.extra.github_link }}', '_blank')" role="button" tabIndex="0">
+  <a class="no-underline" href="{{  page.extra.github_link}}" target="_blank">
+    <img class="store-icon-big" src="{{ get_url(path='img/store-icons/Github.webp') }}"
+      alt="Get {{ page.title }} on Github" title="Get {{ page.title }} on Github">
+  </a>
   {% endif %}
   {% if page.extra.itchio_link %}
-  <img class="store-icon-big" src="{{ get_url(path='img/store-icons/itchio.webp') }}" alt="Available on itch.io"
-    onClick="window.open('{{ page.extra.itchio_link }}', '_blank')" role="button" tabIndex="0">
+  <a class="no-underline" href="{{  page.extra.itchio_link}}" target="_blank">
+    <img class="store-icon-big" src="{{ get_url(path='img/store-icons/itchio3.webp') }}" alt="Available on itch.io"
+      title="Play {{ page.title }} on itch.io">
+  </a>
   {% endif %}
 </div>
 
