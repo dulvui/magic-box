@@ -23,3 +23,11 @@ a:hover {
         box-shadow: 0px $hover 0px $link-color-dark inset;
     }
 }
+
+.no-underline {
+    box-shadow: none;
+}
+
+.no-underline:hover {
+    box-shadow: none;
+}
