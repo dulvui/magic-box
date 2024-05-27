@@ -1,102 +1,89 @@
 .game-box {
-    display: flex;
+  display: flex;
 }
 
 .game-icon {
-    float: left;
+  float: left;
 }
 
 .game-box-right {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .game-title {
-    font-weight: 500;
+  font-weight: 500;
 }
 
 .game-description {
-    font-weight: 300;
-    display: flex;
-    align-self: flex-start;
+  font-weight: 300;
+  display: flex;
+  flex: 1;
+  align-items: center;
 }
 
 .store-icons {
-    display: flex;
-    flex-wrap: wrap;
+  display: flex;
+  flex-wrap: wrap;
 }
 
 
 // Desktop
 @media only screen and (min-width: 1024px) {
-    .game-box {
-        width: $desktop-width / 1.5;
-        height: 10vw;
-        margin-top: 0.5vw;
-        margin-bottom: 1.5vw;
-    }
+  .game-box {
+    width: $desktop-width / 1.5;
+    height: 10vw;
+    margin-bottom: 2vw;
+  }
 
 
-    .game-icon {
-        width: 10vw;
-        height: 10vw;
-        margin-right: 1.5vw;
-        border-radius: 1vw;
-        cursor: pointer;
-    }
+  .game-icon {
+    width: 10vw;
+    height: 10vw;
+    margin-right: 1.5vw;
+    border-radius: 1vw;
+    cursor: pointer;
+  }
 
-    .game-title {
-        font-size: 1.2em;
-    }
+  .game-title {
+    font-size: 1.2em;
+  }
 
-    .game-description {
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-    }
-
-
-    .store-icon {
-        cursor: pointer;
-        height: 2.2vw;
-        margin-right: 0.5vw;
-        margin-bottom: 0.2vw;
-    }
+  .store-icon {
+    display: flex;
+    height: 2.2vw;
+    margin-right: 0.5vw;
+    margin-top: 0.5vw;
+  }
 
 
 }
 
 // Mobile
 @media only screen and (max-width: 1024px) {
-    .game-box {
-        padding-top: 3vw;
-        padding-bottom: 3vw;
-        width: $mobile-width;
-        height: 28vw;
-        margin-top: 2vw;
-    }
+  .game-box {
+    width: $mobile-width;
+    height: 31vw;
+    margin-bottom: 5vw;
+  }
 
-    .game-icon {
-        margin-right: 4vw;
-        width: 31vw;
-        height: 31vw;
-        border-radius: 4vw;
-    }
+  .game-icon {
+    margin-right: 4vw;
+    width: 31vw;
+    height: 31vw;
+    border-radius: 4vw;
+  }
 
+  .game-title {
+    display: flex;
+    font-weight: 500;
+    font-size: 1.2em;
+  }
 
-    .game-title {
-        display: flex;
-        font-weight: 500;
-        font-size: 1.2em;
-    }
-
-    .game-description {
-        margin-top: 1.5vw;
-        margin-bottom: 2vw;
-    }
-
-    .store-icon {
-        height: 7vw;
-        margin-right: 2vw;
-        margin-bottom: 1.5vw;
-    }
+  .store-icon {
+    display: flex;
+    height: 7vw;
+    margin-right: 2vw;
+    margin-top: 1.5vw;
+  }
 }
