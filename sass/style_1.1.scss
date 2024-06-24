@@ -1,0 +1,31 @@
+$background-color-light: #FDF6E3;
+$background-color-dark: #002b36;
+
+$link-color-light: #bb000080;
+$link-color-dark: #53f5c480;
+
+$font-color-light: $background-color-dark;
+$font-color-dark: $background-color-light;
+
+$desktop-width: 42vw;
+$mobile-width: 85vw;
+
+$desktop-font-size: 1.2vw;
+$mobile-font-size: 4.5vw;
+
+
+
+// for all
+@import 'base';
+@import 'font';
+@import 'fade-in';
+@import 'link';
+@import 'navbar';
+@import 'footer';
+
+// specific sites
+@import 'index';
+@import 'blog';
+@import 'game';
+@import 'game-box';
+@import 'progress';

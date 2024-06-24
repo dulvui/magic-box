@@ -47,6 +47,14 @@ p {
     display: none;
 }
 
+a.zola-anchor:before { 
+    content: '';
+    display: block;
+    position: relative;
+    width: 0;
+    height: 3.5rem;
+    margin-top: -3.5rem;
+}
 
 .itchio {
     @media (prefers-color-scheme: dark) {
