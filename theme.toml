@@ -3,7 +3,7 @@ description = "A simple blog theme with project landing-pages"
 license = "MIT"
 homepage = "https://github.com/dulvui/magic-box"
 min_version = "0.4.0"
-demo = "https://dulvui.github.io/magic-box"
+demo = "https://simondalvai.org"
 
 [extra]
 
