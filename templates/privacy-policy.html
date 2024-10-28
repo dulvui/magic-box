@@ -1,36 +1,41 @@
 {% extends "base.html" %}
 
 {% block content %}
-<h1>{{ page.title | safe }} </h1>
+<h1>{{ page.title | safe }}</h1>
 
 <p>{{ page.extra.name | safe }} <strong>doesn't collect or share any data</strong>.</p>
 <p>No personal data, tracking data or any other type of data is leaving your device at all and so it can't even reach
-        the Internet.
+the Internet.
 </p>
 <p>{{ page.extra.name | safe }} is made with <a a href="{{ page.extra.toollink | safe }}" target="_blank">{{
-                page.extra.tool | safe }}</a> and it is licensed under
-        the free and libre Open Source
-        {% if page.extra.licenselink and page.extra.license%}
-        <a a href="{{ page.extra.licenselink | safe }}" target="_blank">{{ page.extra.license | safe }}</a>
-        license. It doesn't track you and has no third party libraries included.
+    page.extra.tool | safe }}</a> and it is licensed under
+the free and libre Open Source
+{% if page.extra.licenselink and page.extra.license%}
+<a a href="{{ page.extra.licenselink | safe }}" target="_blank">{{ page.extra.license | safe }}</a>
+license. It doesn't track you and has no third party libraries included.
 
-        {% endif %}
-        {% if page.extra.repo_github %}
-        You can find the source code on <a a href="{{ page.extra.repo_github | safe }}" target="_blank">GitHub</a>
-        {% if page.extra.repo_codeberg %}
-        and <a a href="{{ page.extra.repo_codeberg | safe }}" target="_blank">Codeberg</a>.
-        {% else %}.
-        {% endif %}
+{% endif %}
+{% if page.extra.repo_github %}
+You can find the source code on <a a href="{{ page.extra.repo_github | safe }}" target="_blank">GitHub</a>
+{% if page.extra.repo_codeberg %}
+and <a a href="{{ page.extra.repo_codeberg | safe }}" target="_blank">Codeberg</a>.
+{% else %}.
+{% endif %}
 </p>
 {% endif %}
 </p>
+<p>This website is hosted on <a href="https://www.hetzner.com/" target="_blank">Hetzner</a> in Nuremberg, Germany, running on
+    <a href="https://www.debian.org/" target="_blank">Debian</a> with a <a href="https://caddyserver.com" target="_blank">Caddy</a> webserver. 
+    <br>
+    This website doesn’t set or read any cookies or other locally stored data. When a visitor accesses this website, the webserver
+    only logs a masked IP-Address (example 192.168.X.X), a timestamp, the accessed file and the HTTP status code. No information that
+    might identify the visitor is logged.
+</p>
 <p>This policy is effective as of {{ config.extra.privacy_policy_updated | safe | date(format="%d. %B %Y") }}. Any
-        changes to this privacy
-        policy can be found on <a a href="{{ config.extra.repo_github | safe }}" target="_blank">GitHub</a> and <a a
-                href="{{ config.extra.repo_codeberg | safe }}" target="_blank">Codeberg</a> commits
-        history of
-        this website.</p>
+changes to this privacy
+policy can be found on <a a href="{{ config.extra.repo_github | safe }}" target="_blank">GitHub</a> and
+    <a href="{{ config.extra.repo_codeberg | safe }}" target="_blank">Codeberg</a> commits history of this website.</p>
 <p>If you have questions send me a mail at <a href="mailto:{{ config.extra.email | safe }}">{{
-                config.extra.email | safe }}</a>.</p>
+    config.extra.email | safe }}</a>.</p>
 
 {% endblock content %}
