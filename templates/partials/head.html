@@ -37,10 +37,10 @@
   <meta property="og:description" content="{{ section.title }}">
   {% endif %}
 
-  {% if page.preview_image %}
-  <meta property="og:image" content="{{ page.preview_image }}">
-  {% elif section.preview_image %}
-  <meta property="og:image" content="{{ section.preview_image }}">
+  {% if page.extra.preview_image %}
+  <meta property="og:image" content="{{ get_url(path=page.extra.preview_image, trailing_slash=false) | safe }}">
+  {% elif section.extra.preview_image %}
+  <meta property="og:image" content="{{ get_url(path=section.extra.preview_image, trailing_slash=false) | safe }}">
   {% else %}
   <meta property="og:image" content="{{ get_url(path='me.webp', trailing_slash=false) | safe }}">
   {%- endif %}
@@ -59,8 +59,6 @@
   <link rel="mask-icon" href="/favicons/safari-pinned-tab.svg" color="#5bbad5">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
-
-
 
   {% block rss %}
   <link rel="alternate" type="application/rss+xml" title="RSS"
