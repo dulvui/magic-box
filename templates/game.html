@@ -1,15 +1,18 @@
 {% extends "base.html" %}
 
 {% block content %}
+
 <h1>
   {{ page.title }}
 </h1>
 
-<img class="game-page-icon" src="{{ get_url(path=page.extra.icon) }}" alt="{{ page.title }} icon">
-
-{{ page.content | safe }}
-
 <div>
+  {% if page.extra.steam_link %}
+  <a class="no-underline" href="{{  page.extra.steam_link}}" target="_blank">
+      <img class="store-icon-big" src="{{ get_url(path='img/store-icons/steam.svg') }}"
+          alt="Available on Steam" title="Play {{ page.title }} on Steam">
+  </a>
+  {% endif %}
   {% if page.extra.playstore_link %}
   <a class="no-underline" href="{{  page.extra.playstore_link}}" target="_blank">
     <img class="store-icon-big" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}"
@@ -48,6 +51,10 @@
   </a>
   {% endif %}
 </div>
+
+<img class="game-page-icon" src="{{ get_url(path=page.extra.icon) }}" alt="{{ page.title }} icon">
+
+{{ page.content | safe }}
 
 <div id="screenshots">
   {% for asset in page.assets -%}

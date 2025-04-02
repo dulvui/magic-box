@@ -3,7 +3,7 @@
 {% block content %}
 
 <div class="top-row">
-  <div id="hello">Hello.</div> <img class="selfie" src="{{ config.extra.icon | safe }}" alt="An image of myself">
+  <div id="hello">Hello.</div>
 </div>
 <div id="introduction">{{ section.extra.introduction | safe }}</div>
 
@@ -12,10 +12,13 @@
 
 <h2><a href="/games">Games</a></h2>
 
-{% set games = get_section(path="games/_index.md") %}
-{% for page in games.pages | filter(attribute="extra.state", value="released") | slice(end=2) %}
-{% include 'partials/game-box.html' %}
-{% endfor %}
+<div class="game-box-list">
+    {% set games = get_section(path="games/_index.md") %}
+    {% for page in games.pages | filter(attribute="extra.state", value="released") %}
+    <!-- filter out pages that are not projects, like 'About' -->
+    {% include 'partials/game-box.html' %}
+    {% endfor %}
+</div>
 
 <h2><a href="/blog">Blog</a></h2>
 

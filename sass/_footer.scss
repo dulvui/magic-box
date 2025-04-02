@@ -25,35 +25,20 @@
     @media (prefers-color-scheme: dark) {
         filter: invert(1);
     }
-}
-
-// Desktop
-@media only screen and (min-width: 1024px) {
-    .simple-icons {
-        margin-top: 4vh;
-    }
-
-    .simple-icon {
-        width: 3.4vw;
-        height: 3.4vw;
-        margin-right: 0.5vw;
-        margin-left: 0.5vw;
-        cursor: pointer;
-    }
-
+    width: 3.4em;
+    height: 3.4em;
+    margin-top: 1em;
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+    cursor: pointer;
 }
 
 // Mobile
 @media only screen and (max-width: 1024px) {
-
-    .simple-icons {
-        margin-top: 2vh;
-    }
-
-    .simple-icon {
-        width: 12vw;
-        height: 12vw;
-        margin-right: 2.1vw;
-        margin-left: 2.1vw;
-    }
+  .simple-icon {
+    width: 2em;
+    height: 2em;
+    margin-right: 0.25em;
+    margin-left: 0.25em;
+  }
 }

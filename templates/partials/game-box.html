@@ -1,46 +1,6 @@
 <div class="game-box">
-    <div class="game-box-left">
-        <a class="no-underline" href="{{  page.permalink}}" target="_blank">
-            <img class="game-icon" src="{{ get_url(path=page.extra.icon) }}" alt="{{ page.title }} icon"
-                title="{{ page.title }}">
-        </a>
-    </div>
-    <div class="game-box-right">
-        <div class="game-title">
-            <a href="{{ page.permalink | safe }}">
-                {{ page.title }}</a>
-        </div>
-        <div class="game-description">{{ page.description | safe }}</div>
-        <div class="store-icons">
-            {% if page.extra.playstore_link %}
-            <a class="no-underline" href="{{  page.extra.playstore_link}}" target="_blank">
-                <img class="store-icon" src="{{ get_url(path='img/store-icons/PlayStore.webp') }}"
-                    alt="Get {{ page.title }} on Google Play" title="Get {{ page.title }} on Google Play">
-            </a>
-            {% endif %}
-            {% if page.extra.appstore_link %}
-            <a class="no-underline" href="{{  page.extra.appstore_link}}" target="_blank">
-                <img class="store-icon" src="{{ get_url(path='img/store-icons/AppStore.webp') }}"
-                    alt="Download {{ page.title }} on the App Store" title="Download {{ page.title }} on the App Store">
-            </a>
-            {% endif %}
-            {% if page.extra.fdroid_link %}
-            <a class="no-underline" href="{{ page.extra.fdroid_link }}" target="_blank">
-                <img class="store-icon" src="{{ get_url(path='img/store-icons/FDroid.webp') }}"
-                    alt="Get {{ page.title }} on F-Droid" title="Get {{ page.title }} on F-Droid">
-            </a>
-            {% endif %}
-            {% if page.extra.itchio_link %}
-            <a class="no-underline" href="{{  page.extra.itchio_link}}" target="_blank">
-                <img class="store-icon itchio" src="{{ get_url(path='img/store-icons/itchio3.webp') }}"
-                    alt="Available on itch.io" title="Play {{ page.title }} on itch.io">
-            </a>
-            {% elif page.extra.github_link %}
-            <a class="no-underline" href="{{  page.extra.github_link}}" target="_blank">
-                <img class="store-icon" src="{{ get_url(path='img/store-icons/Github.webp') }}"
-                    alt="Get {{ page.title }} on Github" title="Get {{ page.title }} on Github">
-            </a>
-            {% endif %}
-        </div>
-    </div>
+    <a class="no-underline" href="{{  page.permalink }}">
+        <img class="game-icon" src="{{ get_url(path=page.extra.icon) }}" alt="{{ page.title }} icon"
+            title="{{ page.title }}">
+    </a>
 </div>

@@ -5,24 +5,14 @@
   {{ section.title }}
 </h1>
 {{ section.content | safe }}
-<h2>Godot Engine</h2>
 
-{% set games = get_section(path="games/_index.md") %}
-{% for page in games.pages | filter(attribute="extra.state", value="released") %}
-<!-- filter out pages that are not projects, like 'About' -->
-{% if page.extra.type == 'Godot' %}
-{% include 'partials/game-box.html' %}
-{% endif %}
-{% endfor %}
-
-
-<h2>libGDX</h2>
-
-{% for page in games.pages | filter(attribute="extra.state", value="released") %}
-{% if page.extra.type == 'libGDX' %}
-{% include 'partials/game-box.html' %}
-{% endif %}
-{% endfor %}
+<div class="game-box-list">
+    {% set games = get_section(path="games/_index.md") %}
+    {% for page in games.pages | filter(attribute="extra.state", value="released") %}
+    <!-- filter out pages that are not projects, like 'About' -->
+    {% include 'partials/game-box.html' %}
+    {% endfor %}
+</div>
 
 <!-- Coming soon -->
 {% set coming_soon = games.pages | filter(attribute="extra.released", value="coming_soon") %}
@@ -30,22 +20,23 @@
 
 <h2>Coming soon...</h2>
 
-{% for page in coming_soon %}
-{% include 'partials/game-box.html' %}
-{% endfor %}
+<div class="game-box-list">
+    {% for page in coming_soon %}
+    {% include 'partials/game-box.html' %}
+    {% endfor %}
+</div>
 {% endif %}
-
 
 <!-- Archived -->
 {% set archived = games.pages | filter(attribute="extra.state", value="archived") %}
 {% if archived | length > 0 %}
 <h2>Archived games</h2>
-<p>This games have been archived and are no longer available.
-  Only the source code is still readable.
-</p>
-{% for page in archived %}
-{% include 'partials/game-box.html' %}
-{% endfor %}
+
+<div class="game-box-list">
+    {% for page in archived %}
+    {% include 'partials/game-box.html' %}
+    {% endfor %}
+</div>
 {% endif %}
 
 {% endblock content %}

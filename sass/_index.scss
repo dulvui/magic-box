@@ -5,64 +5,21 @@
 
 #hello {
     font-weight: 500;
+    font-size: 4em;
+    margin-top: 0.5em;
+    margin-bottom: 0.25em;
+    margin-left: 0px;
 }
 
 #introduction {
     font-weight: 500;
+    font-size: 2em;
 }
 
 .selfie {
     border-radius: 50%;
-}
-
-
-// Desktop
-@media only screen and (min-width: 1024px) {
-
-    .top-row {
-        margin-top: 2vw;
-    }
-
-    #hello {
-        font-size: 4em;
-        margin-top: 1.5vw;
-        margin-bottom: 10px;
-        margin-left: 0px;
-    }
-
-    #introduction {
-        font-size: 2em;
-        margin-top: 10px;
-    }
-
-
-    .selfie {
-        width: 8vw;
-        height: 8vw;
-        margin-left: 5vw;
-    }
-}
-
-// Mobile
-@media only screen and (max-width: 1024px) {
-
-    .top-row {
-        margin-top: 6vw;
-    }
-
-    #hello {
-        font-size: 3em;
-    }
-
-    #introduction {
-        font-size: 1.5em;
-        font-weight: 500;
-        margin-top: 15px;
-    }
-
-    .selfie {
-        width: 20vw;
-        height: 20vw;
-        margin-left: 14vw;
-    }
+    width: 8em;
+    height: 8em;
+    margin-left: 5em;
+    float: right;
 }

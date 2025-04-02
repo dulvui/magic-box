@@ -7,23 +7,18 @@ pre[class*=" language-"] {
 
 .blog-image {
     height: auto;
+    width: 20em;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
 }
 
 
 
 // Desktop
 @media only screen and (min-width: 1024px) {
-
-    .blog-image {
-        width: 20vw;
-        margin-top: 0.5vw;
-        margin-bottom: 0.5vw;
-    }
-
     .blog-image-wide {
         width: $desktop-width;
     }
-
 }
 
 // Mobile
@@ -38,11 +33,4 @@ pre[class*=" language-"] {
     .blog-image-wide {
         width: $mobile-width;
     }
-
-    .blog-image {
-        width: $mobile-width;
-        margin-top: 1vw;
-        margin-bottom: 1vw;
-    }
-
 }
