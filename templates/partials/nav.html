@@ -1,26 +1,36 @@
 <nav id="navbar">
-    <!-- Loops over current path, and creates the clickable url-->
     <div>
-        <a class="nav" href="/">simondalvai.org</a>
+        <a class="nav" href="/">
+            {{ config.base_url | split(pat="/") | last }}
+        </a>
+        <!-- Loops over current path, and creates the clickable url -->
         {% if current_path %}
-        {% set_global path_count = 1%}
-        {% set path_length = current_path | split(pat="/") | length - 1 %}
-        {% for path in current_path | split(pat="/") %}
-        {% if path | wordcount > 0 %}
-        {% if loop.index < path_length %} {% set partial_url=current_path | split(pat='/' ) | slice(end=path_count) |
-            join(sep='/' ) %} <span class="breadcrumb">/<a class="breadcrumb" href="{{ partial_url }}">{{ path
-                }}</a></span>
-            {% else %}
-            <span class="breadcrumb">/<a class="nav" href="{{ current_path }}">{{ path }}</a></span>
-            {% endif %}
-            {% endif %}
-            {% set_global path_count = (path_count + 1)%}
+            {% set_global path_count = 1%}
+            {% set path_length = current_path | split(pat="/") | length - 1 %}
+            {% for path in current_path | split(pat="/") %}
+                {% if path | wordcount > 0 %}
+                    {% if loop.index < path_length %}
+                    {% set partial_url=current_path | split(pat='/' ) | slice(end=path_count) | join(sep='/' ) %}
+                    <span class="breadcrumb">/<a class="breadcrumb" href="{{ partial_url }}">{{ path }}</a></span>
+                    {% else %}
+                    <span class="breadcrumb">/<a class="nav" href="{{ current_path }}">{{ path }}</a></span>
+                    {% endif %}
+                {% endif %}
+
+                {% set_global path_count = (path_count + 1)%}
             {% endfor %}
-            {% endif %}
+        {% endif %}
     </div>
+
+    <!-- Section links -->
+    {% set section = get_section(path="_index.md", metadata_only=true) %}
+    {% if section.subsections | length > 0 %}
     <span id="nav-separator"></span>
     <div>
-        <a class="nav-right" href="/games">games</a>
-        <a class="nav-right" href="/blog">blog</a>
+    {% for section in section.subsections %}
+        {% set section = get_section(path=section, metadata_only=true) %}
+        <a class="nav-right" href="/{{ section.components | last}}">{{ section.components | last }}</a>
+        {% endfor %}
     </div>
+    {% endif %}
 </nav>

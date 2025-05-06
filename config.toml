@@ -1,9 +1,6 @@
 # The URL the site will be built for
-base_url = "http://simondalvai.org/magic-box/"
+base_url = "https://simondalvai.org"
 title = "Gianfranco Zola"
-
-# For overriding the default output directory `public`, set it to another value (e.g.: "docs")
-output_dir = "../docs"
 
 # When set to "true", the generated HTML files are minified.
 minify_html = true
@@ -29,6 +26,8 @@ external_links_target_blank = true
 
 [extra]
 icon = "img/icon.jpg"
+copyright = "2025 Simon Dalvai"
+email = "info@simondalvai.org"
 
 # links
 links.github = "https://github.com/dulvui"
@@ -41,8 +40,6 @@ links.liberapay = "https://liberapay.com/dulvui"
 links.paypal = "https://paypal.me/simondalvai"
 links.matrix = "https://matrix.to/#/%23s9i.org:matrix.org"
 links.discord = "https://discord.gg/a5DSHZKkA8"
-
-email = "info@simondalvai.org"
 
 # privacy policy
 privacy_policy_updated = "2023-06-10"

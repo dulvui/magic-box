@@ -1,36 +1,57 @@
-<div class="simple-icons">
-    <!--<a class="no-underline" href="{{ config.extra.links.matrix }}" target="_blank">-->
-    <!--    <img class="simple-icon" src="{{ get_url(path='img/icons/matrix.svg') | safe }}" alt="Matrix button"-->
-    <!--        title="Matrix">-->
-    <!--</a>-->
-    <!--<a class="no-underline" href="{{ config.extra.links.discord }}" target="_blank">-->
-    <!--    <img class="simple-icon" src="{{ get_url(path='img/icons/discord.svg') | safe }}" alt="Discord button"-->
-    <!--        title="Discord">-->
-    <!--</a>-->
-    <a class="no-underline" href="{{ config.extra.links.mastodon }}" target="_blank">
-        <img rel="me" class="simple-icon" src="{{ get_url(path='img/icons/mastodon.svg') | safe }}"
-            alt="mastodon button" title="Mastodon">
-    </a>
-    <a class="no-underline" href="{{ config.extra.links.github }}" target="_blank">
-        <img class="simple-icon" src="{{ get_url(path='img/icons/github.svg') | safe }}" alt="Github button"
-            title="Github">
-    </a>
-    <a class="no-underline" href="{{ config.extra.links.codeberg }}" target="_blank">
-        <img class="simple-icon" src="{{ get_url(path='img/icons/codeberg.svg') | safe }}" alt="Codeberg button"
-            title="Codeberg">
-    </a>
-    <a class="no-underline" href="{{ get_url(path=`rss.xml`, trailing_slash=false) }}" target="_blank">
-        <img class="simple-icon" src="{{ get_url(path='img/icons/rss.svg') | safe }}" alt="RSS button" title="RSS feed">
-    </a>
-    <a class="no-underline" href="mailto:{{config.extra.email}}" target="_blank">
-        <img class="simple-icon" src="{{ get_url(path='img/icons/mail.svg') | safe }}" alt="Email button"
-            title="E-Mail">
-    </a>
-    <!-- Hidden link for Mastodon verification -->
-    <a rel="me" id="mastodon-verification" href="https://mastodon.social/@dulvui"></a>
-</div>
+{% if config.extra.links %}
+    <div class="simple-icons">
+        {% if config.extra.links.matrix %}
+        <a class="no-underline" href="{{ config.extra.links.matrix }}" target="_blank">
+            <img class="simple-icon" src="{{ get_url(path='img/icons/matrix.svg') | safe }}" alt="Matrix button"
+                title="Matrix">
+        </a>
+        {% endif %}
+
+        {% if config.extra.links.discord %}
+        <a class="no-underline" href="{{ config.extra.links.discord }}" target="_blank">
+            <img class="simple-icon" src="{{ get_url(path='img/icons/discord.svg') | safe }}" alt="Discord button"
+                title="Discord">
+        </a>
+        {% endif %}
+
+        {% if config.extra.links.mastodon %}
+        <a class="no-underline" href="{{ config.extra.links.mastodon }}" target="_blank">
+            <img rel="me" class="simple-icon" src="{{ get_url(path='img/icons/mastodon.svg') | safe }}"
+                alt="mastodon button" title="Mastodon">
+        </a>
+        <!-- Hidden link for Mastodon verification -->
+        <a rel="me" id="mastodon-verification" href="{{ config.extra.links.mastodon }}"></a>
+        {% endif %}
+
+        {% if config.extra.links.github %}
+        <a class="no-underline" href="{{ config.extra.links.github }}" target="_blank">
+            <img class="simple-icon" src="{{ get_url(path='img/icons/github.svg') | safe }}" alt="Github button"
+                title="Github">
+        </a>
+        {% endif %}
+
+        {% if config.extra.links.codeberg %}
+        <a class="no-underline" href="{{ config.extra.links.codeberg }}" target="_blank">
+            <img class="simple-icon" src="{{ get_url(path='img/icons/codeberg.svg') | safe }}" alt="Codeberg button"
+                title="Codeberg">
+        </a>
+        {% endif %}
+
+        {% if config.extra.email %}
+        <a class="no-underline" href="mailto:{{config.extra.email}}" target="_blank">
+            <img class="simple-icon" src="{{ get_url(path='img/icons/mail.svg') | safe }}" alt="Email button"
+                title="E-Mail">
+        </a>
+        {% endif %}
+
+        <!--RSS-->
+        <a class="no-underline" href="{{ get_url(path=`rss.xml`, trailing_slash=false) }}" target="_blank">
+            <img class="simple-icon" src="{{ get_url(path='img/icons/rss.svg') | safe }}" alt="RSS button" title="RSS feed">
+        </a>
+    </div>
+{% endif %}
 
 <footer class="footer">
-    <a href="/privacy-policy">Privacy Policy</a> &copy2022-2025 Simon Dalvai <a
+    <a href="/privacy-policy">Privacy Policy</a> &copy{{ config.extra.copyright }} <a
         href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">CC BY-SA 4.0</a>
 </footer>
