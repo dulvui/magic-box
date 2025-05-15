@@ -42,7 +42,7 @@
   {% elif section.extra.preview_image %}
   <meta property="og:image" content="{{ get_url(path=section.extra.preview_image, trailing_slash=false) | safe }}">
   {% elif config.extra.icon %}
-  <meta property="og:image" content="{{ get_url(path='config.extra.icon', trailing_slash=false) | safe }}">
+  <meta property="og:image" content="{{ get_url(path=config.extra.icon, trailing_slash=false) | safe }}">
   {% endif %}
 
   {% endblock seo %}
