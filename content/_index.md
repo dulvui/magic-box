@@ -1,19 +1,11 @@
 +++
-title = "Gianfranco Zola"
+title = "Magic Box"
 template = "index.html"
 [extra]
-image = "img/me.webp"
-introduction = "My name is Gianfranco Zola."
-github = "https://github.com/dulvui"
-githubsponsors = "https://github.com/sponsors/dulvui"
-linkedin = "https://www.linkedin.com/in/simon-dalvai/"
-liberapay = "https://liberapay.com/dulvui"
-mastodon = "https://mastodon.social/@dulvui"
-reddit = "https://www.reddit.com/user/dulvui"
-
-blog = "I also write some things in my blog:"
+subtite = "Hello."
+introduction = "I'm Magic Box."
 
 privacypolicy = "privacy-policies.md"
 +++
 
-I create  **open source** games for **free** with **zero ads** and **zero tracking** and write a **blog** about game development and more.
+I'm a **zola** static site generator theme.

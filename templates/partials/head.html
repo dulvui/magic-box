@@ -41,9 +41,9 @@
   <meta property="og:image" content="{{ get_url(path=page.extra.preview_image, trailing_slash=false) | safe }}">
   {% elif section.extra.preview_image %}
   <meta property="og:image" content="{{ get_url(path=section.extra.preview_image, trailing_slash=false) | safe }}">
-  {% else %}
-  <meta property="og:image" content="{{ get_url(path='me.webp', trailing_slash=false) | safe }}">
-  {%- endif %}
+  {% elif config.extra.icon %}
+  <meta property="og:image" content="{{ get_url(path='config.extra.icon', trailing_slash=false) | safe }}">
+  {% endif %}
 
   {% endblock seo %}
 
