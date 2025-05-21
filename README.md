@@ -1,3 +1,9 @@
+# MOVED TO CODEBERG
+The main repository is on now [Codeberg](https://codeberg.org/dulvui/magic-box).  
+FOSS should be hosted by FOSS.
+
+----
+
 # magic-box
 A simple blog theme with project landing-pages for the [zola](https://getzola.org) static site generator.
 To the great italian football-player the "Magic Box", Gianfranco Zola.
